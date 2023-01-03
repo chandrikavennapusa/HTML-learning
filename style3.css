@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .img-container {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    height: 100px;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

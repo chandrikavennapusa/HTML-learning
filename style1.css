@@ -1,4 +1,51 @@
-img{
-    
-    background-image: url("C:/Users/Chandrika%20Vennapusa/Desktop/vis/nature1.webp");
+h1{
+    text-shadow: 2px 2px white;
+    background-color:grey;
+    border-style: dotted;
+    outline: 5px rgb(142, 31, 31) solid;
+    border-width: 2px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
 }
+h2{
+    text-indent: 150px;
+    text-align: justify;
+    border-style: double;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+span{
+    color: green;
+    text-decoration-line: underline;
+    text-decoration-color: aliceblue;
+    text-decoration-style: wavy;
+
+}
+  p{
+    color: brown;
+    background-origin: padding-box;
+    border-bottom: 1px solid black;
+    margin: 5px;
+    text-transform: capitalize;
+  } 
+  img{
+    border-style: groove;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    outline: 2px solid gray;
+    outline-offset: 10px;
+  }
+ body{
+    background-image: url('html3.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+   
+ }
+ .ip{
+    font-family: "Sofia", sans-serif;
+  font-size: 30px;
+ }
