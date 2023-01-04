@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+  }
+body{
+    margin: 20px;
+}
+ul{
+    list-style-type:none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+}
+li{
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+  }
+.act{
+    background-color: red;
+}
+p::first-letter{
+    color:red;
+    font-size: 50px;
+}
+::selection{
+    color: white;
+    background-color: yellowgreen;
+}
+
+
+fieldset{
+    background-color: #333;
+}
