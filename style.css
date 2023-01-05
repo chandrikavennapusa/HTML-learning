@@ -1,0 +1,33 @@
+div{
+    display: inline-block;
+}
+li{
+    list-style-type: none;
+    float: left;
+    padding: 20px 20px;
+    margin: 20px;
+}
+header{
+    height: 10px;
+}
+nav{
+    padding-top: 100px;
+    text-align: center;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+figure{
+    display: inline-block;
+}
+section{
+
+   bottom: 10px;
+    text-align: center;
+}
+body{
+    background-image: url(people.jpg);
+    background-repeat: no-repeat;
+    background-position: 100%;
+}

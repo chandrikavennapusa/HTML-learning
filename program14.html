@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            #corner{
+                border-radius: 25px;
+                background-image:url('C:/Users/Chandrika%20Vennapusa/Downloads/image.jpg') ;
+                width: 200px;
+                height: 200px;
+            }
+            #corn{
+                border-radius: 100px 20px 100px 5px;
+                border: 2px solid yellowgreen;
+                height: 200px;
+                width: 200px;
+            }
+            #cor{
+                background-color: beige;
+                border-radius: 20px 100px ;
+                height: 200px;
+                width: 200px;
+            }
+            #border{
+                border: 5px solid transparent;
+                padding: 15px;
+                border-image: url(C:/Users/Chandrika%20Vennapusa/Downloads/image.jpg) 30% round; 
+            }
+            #backgroundimg{
+                background-image: url(html1.jpg) , url(C:/Users/Chandrika%20Vennapusa/Downloads/image.jpg);
+                background-repeat: no-repeat , repeat;
+                background-position: right bottom, left top;
+                padding: 15px;
+               height: 200px;
+               border-radius: 20px 50px 20px 50px;
+            }
+            #back{
+                border: 5px;
+                background-image: url(html2.jpg);
+                background-size: 100px 80px;
+            }
+            #cover{
+                background-image: url(html3.jpg) ;
+                background-color: yellow;
+                background-repeat: no-repeat;
+                background-origin: content-box;
+                padding: 35px;
+                border: 5px dotted black;
+                box-shadow: 0px 0px 20px currentColor;
+                text-shadow: 2px 2px 4px red;
+            }
+            body{
+                background-image: linear-gradient(red,orange,yellow,green,blue,indigo,violet);
+            }
+            .div {
+                background-color: aqua;
+                width: 200px;
+                height: 200px;
+                transition-timing-function: ease-in-out;
+            }
+            #div1{
+                transform: skewY(20deg);
+            }
+            p[id^="border"]:hover {
+                    width: 500px;
+            }
+            #h{
+                transition-timing-function:linear;
+            }
+            h2{
+                width: 100px;
+  height: 100px;
+  background:green;
+  transition: width 2s;
+            }
+            h2:hover{
+                width: 300px;;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="h"> easy </h2>
+        <p id="corner"> image</p>
+        <p id="corn">  border </p>
+        <p id="cor"> back ground color</p>
+        <p id="border"> border rounds </p>
+        <div id="backgroundimg"> </div>
+        <p id="back"></p>
+       <div id="cover"><h2>Lorem Ipsum Dolor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p> </div>
+    <br><div id="div1" class="div"> this is the div tag put on the axis of them.</div>   
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head><title>Animations</title>
+    <style>
+        @keyframes exm{
+            /* 0%{background-color: red; left: 0px; top: 0px;}
+            15%{background-color: blue; left: 200px; top: 0px;}
+            20%{background-color:grey; left:200px; top:200px}
+            30%{background-color: lawngreen; left: 0px; top: 200px;}
+            40%{background-color: lightblue;}
+            50%{background-color: lightpink;}
+            60%{background-color: rosybrown;}
+            70%{background-color: mediumseagreen;}
+            80%{background-color: mediumturquoise;} */
+             from {left: 0px;}
+  to {left: 300px;}
+            
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: exm;
+            animation-duration: 4s;
+            animation-iteration-count: 4;
+            position: relative;
+        }
+        #1{
+            animation-timing-function: linear;
+        }
+        #2{
+            animation-timing-function: ease;
+        }
+        #3{
+            animation-timing-function: ease-in;
+        }
+        #4{
+            animation-timing-function: ease-out;
+        }
+        #5{
+            animation-timing-function: ease-out;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="1"> easy</div>
+        <div id="2"> linear</div>
+        <div id="3">sing-in</div>
+        <div id="4">sign-out</div>
+        <div id="5">easy-in-out</div>
+    </body>
+</html>
