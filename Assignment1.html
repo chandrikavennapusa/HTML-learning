@@ -1,45 +1,61 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div>
-           <hr> <div id="line"> <div><img src="book.png" height="50px" width="50px" alt=""></div>
+            <div id="line"> <div><img src="book.png" height="50px" width="50px" alt=""></div>
             <div> <h1>SITE NAME</h1> </div></div>
-            <div ><ul>
-                <li>HOME &nbsp;</li>
-                <li>CATEGORY &nbsp;</li>
-                <li>LISITING &nbsp;</li>
-                <li>CONTACT US &nbsp; &nbsp;</li>
-                <li class="space"> <i class="material-icons">&#xe148;</i> &nbsp;&nbsp; ADD YOUR LISITING</li>
-            </ul></div>
-        <div class="img">
-        <h3 style="text-align: center;">OVER 36,500+ ACTIVE LISTINGS</h3>
-        <h1 style="text-align: center;">Find Near by Places & Things</h1> 
-           <div class="center">
-            <div >
-                <ul>
-                    <li class="li">All areas &nbsp;&nbsp;&nbsp; <i class="material-icons">expand_more</i>&nbsp; | </li> 
-                    <li class="li">Enter a Location  &nbsp;| </li> 
-                    <li class="li">Price Range &nbsp;&nbsp;&nbsp; <i class="material-icons">expand_more</i>  &nbsp;</li> 
-                    <li class="li space" style="padding:20px;"> <i style="font-size:24px" class="fa">&#xf002;</i> &nbsp;&nbsp;&nbsp;Search Now</li>
+            <div>
+              <ul>
+                <li style="margin: 20px;" ><a href="#">HOME</a> &nbsp;</li>
+                <li style="margin: 20px;"><a href="#">CATEGORY</a> &nbsp;</li>
+                <li style="margin: 20px;" > <a href="#">LISITING</a> &nbsp;</li>
+                <li style="margin: 20px;"> <a href="#">CONTACT US </a>&nbsp; &nbsp;</li>
+                <input type="text" placeholder="&#xf067;&nbsp;&nbsp; ADD YOUR LISITING" style="font-family:FontAwesome"/>
+
                 </ul>
             </div>
-            <div class="next">
-                <figure><img src="home.png" alt="home" height="20px" width="20px">
+        <div class="img">
+        <h3 class="h1">OVER 36,500+ ACTIVE LISTINGS</h3>
+        <h1 class="h1">Find Near by Places & Things</h1> 
+           <div class="center">
+            <div >
+                <input type="text" name="city" list="citynames" placeholder="ALL Areas">
+                <datalist id="citynames">
+                  <option value="Boston">
+                  <option value="Cambridge">
+                    <option value="Hydrabad">
+                        <option value=" Bangloor"></option>
+                </datalist>
+                <input type="text" placeholder="Enter Location">
+                <input type="text" list="price"  placeholder="price Ranges">
+                <datalist id="price">
+                    <option value="1000"></option>
+                    <option value="2000"></option>
+                    <option value="3000"></option>
+                    <option value="4000"></option>
+                    <option value="5000"></option>
+                </datalist>
+                <input type="text" placeholder="&#xF002;&nbsp;&nbsp; SEARCH NOW" style="font-family:FontAwesome"/>
+            </div>
+            <div class="next ">
+                <figure> <a href="#"><img src="home.png" alt="home" height="20px" width="20px"></a>
                     <figcaption>Apartments </figcaption>
                     </figure>
-                    <figure><img src="burger.png" alt="burger" height="20px" width="20px">
+                    <figure> <a href="#"><img src="burger.png" alt="burger" height="20px" width="20px"></a>
                         <figcaption>Food&life</figcaption>
                     </figure>
-                   <figure><img src="car.png" alt="car" height="20px" width="20px">
+                   <figure> <a href="#"><img src="car.png" alt="car" height="20px" width="20px"></a>
                 <figcaption>Car</figcaption>
                 </figure>
-                    <figure><img src="shooping.png" alt="shopping" height="20px" width="20px">
+                    <figure> <a href="#"><img src="shooping.png" alt="shopping" height="20px" width="20px"></a>
                     <figcaption>Shopping</figcaption>
                     </figure>
-                    <figure><img src="travelling.jpg" alt="tarvelling" height="20px" width="20px">
+                    <figure> <a href="#"><img src="travelling.jpg" alt="tarvelling" height="20px" width="20px"></a>
                     <figcaption>Travelling</figcaption>
                     </figure>     
             </div>

@@ -3,21 +3,27 @@ li{
     display: inline-block;
     padding: 10px 10px;
     text-align: center;
-    
+    border-radius: 5px;
+    text-decoration: none;
 }
+
 div{
     display: inline-block;
 }
 figure{
     display: inline-block;
+    padding: 20px;
 }
 .next{
     display: block;
+    padding-left: 100px;
+   
 }
 .center{
     text-align: center;
-   
-   padding: 50px;
+   padding-bottom: 50px;
+   padding-left: 100px;
+   padding-right: 50px;
    
 }
 .img{
@@ -26,27 +32,64 @@ figure{
     background-size: cover;
     padding-left: 50px;
     content: "";
+    width: 90%;
 }
+@media(max-width:600px){
+    .img{
+        display: inline-block;
+    }
+}
+figcaption{
+    color:white;
+}
+ .h1{
+    text-align: center;
+    color: white;
+ }
 .li{
   
    font-size :24px;
+   text-decoration: none;
     
 }
-body{
-    padding-right:10px;
-}
-
 ul{
     background-color: white;
-    min-height: auto;
+    
     
 }
 #line{
     display: inline;
-    padding-left: 20px;
+    padding-left: 60px;
 }
-
-div ul>li:last-child{
-    background-color: gray;
-    border: 2px gray solid;
+a{
+    text-decoration: none;
 }
+li:link {
+    color:black;
+  }
+  li:visited {
+   background-color: grey;
+  }
+   li:hover {
+   background-color:lightgray;
+  }
+  li:active {
+   background-color:grey;
+  }
+  input{
+    font-size: 20px;
+    text-align: center;
+  }
+  input:link {
+    color:black;
+  }
+  input:visited {
+   background-color:lightgray;
+  }
+  input:hover {
+   background-color: lightblue;
+  }
+  input:active {
+   background-color:grey;
+  }
+  
