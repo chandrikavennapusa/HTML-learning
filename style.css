@@ -5,6 +5,12 @@ li{
     text-align: center;
     border-radius: 5px;
     text-decoration: none;
+    margin: 20px;
+}
+.res{
+    display: inline-flex;
+    position: relative;
+    left: -74px;
 }
 
 div{
@@ -16,36 +22,32 @@ figure{
 }
 .next{
     display: block;
-    padding-left: 100px;
+    padding-left: 50px;
    
 }
 .center{
     text-align: center;
-   padding-bottom: 50px;
-   padding-left: 100px;
-   padding-right: 50px;
+   padding-bottom: 50px; 
    
+}
+.heading{
+    color: white;
+    padding-left: 250px;
 }
 .img{
     background-image:url(grey.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-left: 50px;
+    padding-left: 150px;
     content: "";
-    width: 90%;
-}
-@media(max-width:600px){
-    .img{
-        display: inline-block;
-    }
-}
+    width: 100%;}
+
 figcaption{
     color:white;
 }
- .h1{
-    text-align: center;
-    color: white;
- }
+ 
+   
+ 
 .li{
   
    font-size :24px;
@@ -92,4 +94,68 @@ li:link {
   input:active {
    background-color:grey;
   }
-  
+  @media(max-width:666px) and (min-width:320px){
+         .img{
+                 width: 1200px;  
+                 height: 550px;
+            }
+         .heading{
+                  position: absolute;
+                  left: -81px;
+                  right: -337px;
+              }
+                 
+            .res{
+                display: inline-block;
+                top: 258px;
+                          position: absolute;
+                    
+                         left: 386px;
+                 }
+             .next{
+                       position: relative;
+                       display: inline-flex;
+                       top: 450px;
+                      right: -104px;
+                    }
+               input{
+                 margin-bottom: 10px;
+                 padding: 10px;
+                 }
+}
+@media(min-width:666px) and (max-width:768px){
+    .heading{
+        position: absolute;
+        left: 20px;
+    }
+    .img{
+        width: 1117px;
+        position: relative;
+        height: 350px;
+    }
+    .center{
+        position: relative;
+        top: 139px;
+        left: -66px;
+    }
+    .next{
+display: grid;
+grid-gap: 16px;
+grid-template-columns: repeat(5,1fr);
+position: absolute;
+padding: 20px;
+    left: 106px;
+    top: 107px;
+    }
+    input{
+        margin: 10px;
+    } 
+    .res{
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: repeat(2,1fr);
+        position: absolute;
+    left: 115px;
+    }
+    
+}
