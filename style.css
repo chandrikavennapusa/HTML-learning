@@ -7,10 +7,14 @@ li{
     text-decoration: none;
     margin: 20px;
 }
+.book{
+    height: 50px;
+    width: 50px;
+}
 .res{
     display: inline-flex;
     position: relative;
-    left: -74px;
+    left:-206px;
 }
 
 div{
@@ -23,16 +27,23 @@ figure{
 .next{
     display: block;
     padding-left: 50px;
+    top: 23px;
+    position: relative;
+    left: -202px;
    
 }
 .center{
     text-align: center;
    padding-bottom: 50px; 
+   position: relative;
+    left: 115px;
    
 }
 .heading{
     color: white;
-    padding-left: 250px;
+    padding-left: 310px;
+    position: relative;
+    left: -226px;
 }
 .img{
     background-image:url(grey.jpg);
@@ -40,13 +51,24 @@ figure{
     background-size: cover;
     padding-left: 150px;
     content: "";
-    width: 100%;}
+    width: 100%;
+    height: 1000px;
+}
 
 figcaption{
     color:white;
 }
- 
-   
+ .sign{
+        padding: 10px;
+        margin: 10px;
+        background-color: grey;
+        width: 200px;
+        height: 50px;
+ }
+   .size{
+    color: white;
+    font-size: 25px;
+   }
  
 .li{
   
@@ -74,6 +96,7 @@ li:link {
   }
    li:hover {
    background-color:lightgray;
+   text-decoration: none;
   }
   li:active {
    background-color:grey;
@@ -82,6 +105,9 @@ li:link {
     font-size: 20px;
     text-align: center;
   }
+a:hover{
+    text-decoration: none;
+}
   input:link {
     color:black;
   }
@@ -101,37 +127,56 @@ li:link {
             }
          .heading{
                   position: absolute;
-                  left: -81px;
-                  right: -337px;
+                  left: 23px;
+                  right: -575px;
               }
                  
             .res{
                 display: inline-block;
-                top: 258px;
                           position: absolute;
                     
-                         left: 386px;
+                          left: 81px;
+                          top: 135px;
                  }
              .next{
                        position: relative;
                        display: inline-flex;
                        top: 450px;
-                      right: -104px;
+                       left: 0px;
+                       top: 403px;
                     }
                input{
                  margin-bottom: 10px;
                  padding: 10px;
                  }
 }
+@media(max-width:1024px) and (min-width:762px){
+.center{
+    position: relative;
+    left: 2px;
+  
+}
+.heading{
+    position: relative;
+    left: 0px;
+}
+.res{
+    left: -167px;
+    position: relative;
+}
+}
 @media(min-width:666px) and (max-width:768px){
     .heading{
         position: absolute;
-        left: 20px;
+        left: -279px;
     }
     .img{
         width: 1117px;
         position: relative;
         height: 350px;
+    }
+    .image{
+        top: 98px;
     }
     .center{
         position: relative;
@@ -144,8 +189,8 @@ grid-gap: 16px;
 grid-template-columns: repeat(5,1fr);
 position: absolute;
 padding: 20px;
-    left: 106px;
     top: 107px;
+    left: 155px;
     }
     input{
         margin: 10px;
@@ -155,7 +200,14 @@ padding: 20px;
         grid-gap: 16px;
         grid-template-columns: repeat(2,1fr);
         position: absolute;
-    left: 115px;
+        left: 177px;
+        top: 10px;
     }
-    
-}
+    .si{
+        position: relative;
+        left: -67px;
+    }
+    }
+    .contentset{
+        text-align: center;
+    }
