@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: absolute;
+        }
+        div{
+            position: absolute;
+        }
+        #container div{
+            background-color: lightskyblue;
+            border: 5px solid black;
+            height: 100px;
+            width: 100px;
+            opacity: 0.5;
+        }
+        div#mybox{
+                background-color: tomato;
+                opacity: 1;
+                animation: mymove 5s infinite linear;
+                z-index: 1;
+        }
+        @keyframes mymove{
+            50% {z-index: 6;};
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="mybox">dispaly</div>
+        <div style="top: 20px; left: 20px;z-index: 1;">1</div>
+        <div style="top: 40px; left: 40px;z-index: 2;">2</div>
+        <div style="top: 60px; left: 60px;z-index: 3;">3</div>
+        <div style="top: 80px; left: 80px;z-index: 4;"> 4</div>
+        <div style="top: 100px; left: 100px;z-index: 5;">5</div>
+    </div>
+</body>
+</html>

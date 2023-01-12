@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .multicolor-text {
+            text-align: center;
+            font-size: 50px;
+            background: linear-gradient(to left,
+                    violet,
+                    indigo,
+                    blue,
+                    green,
+                    yellow,
+                    orange,
+                    red);
+                    -webkit-background-clip: text;
+                    color: transparent;
+        }
+        .container{
+            position: absolute;
+            max-width: 1000px;
+            margin: 0px;
+            border: 10px solid black;
+            border-image: url(rombos.jpg) 50 round;
+        }
+        .image{
+            height: 500px;
+            width:100%;
+            opacity: 1;
+        }
+        .transporant{
+            padding: 37px;
+    color: chartreuse;
+    position: absolute;
+    font-size: 41px;
+    top: 377px;
+    background: rgb(0,0,0);
+    background: rgb(0,0,0,0.5);
+            
+        }
+        .image2{
+            position: relative;
+        }
+        .list{
+            position: absolute;
+            right: 23px;
+    font-size: 24px;
+           
+        }
+       .spanlist{
+            color: blue;
+        }
+        .list1{
+            color:red;
+        }
+        .list2{
+            position: absolute;
+            right: 22px;
+            font-size: 30px;
+            top: 259px;
+        }
+        .list3{
+            list-style-type: none;
+        }
+     [ class=list3] li::before{
+            content: "\2022";
+            color:blue;
+            display: inline-block;
+            width: 1em;
+
+        }
+        .data{
+            position: absolute;
+    right: 75px;
+    top: 112px;
+};
+        
+    </style>
+</head>
+<body>
+   <marquee behavior="scroll" direction="right"> WELCOME !</marquee>
+   <blockquote>hiii</blockquote>
+   <h1 class="multicolor-text"> chandrika</h1>
+    <div class="container">
+       <div> <img src="image2.jpg" alt="set the transparent" class="image"></div>
+       <div class="transporant">transortant and opcity of the bottom page in html.</div>
+    </div>
+   <div class="list">
+    <ul>
+        <li class="list1" > <span class="spanlist">NUMBER 1</span></li>
+        <li class="list1"><span class="spanlist" >NUMBER 2</span></li>
+        <li class="list1"><span class="spanlist">NUMBER 3</span></li>
+   </ul>
+   </div>
+   <div class="list2">
+        <ul class="list3">
+            <li>number 4 </li>
+            <li>number 5 </li>
+            <li>number 6 </li>
+        </ul>
+   </div>
+   
+    <details class="data">
+        <summary>show the content  </summary>
+        <h1>practicing purpose i use this things.</h1>
+    </details>
+</body>
+</html>
