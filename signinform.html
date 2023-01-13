@@ -19,57 +19,57 @@
              <h1>SITE NAME</h1>
            </div>
         </div>
-         <div class="set">
-         <ul class="order">
+         <div class="setheading1">
+         <ul class="heading">
              
-              <li class="list"><a href="Assignment1.html">HOME</a> &nbsp;</li>
-             <li class="list"><a href="#">CATEGORY</a> &nbsp;</li>
-             <li class="list"> <a href="#">LISITING</a> &nbsp;</li>
-             <li class="list mobilein tabin lapin"> <a href="#">CONTACT US </a>&nbsp; &nbsp;</li>
-             <input class="mobileinput  tabinput lapinput"  type="text" placeholder="&#xf067;&nbsp;&nbsp; ADD YOUR LISITING" style="font-family:FontAwesome"/>
+              <li class="list1"><a href="Assignment1.html">HOME</a> </li>
+             <li class="list1"><a href="#">CATEGORY</a> </li>
+             <li class="list1"> <a href="#">LISITING</a> </li>
+             <li class="list1 mobilein tabin lapin"> <a href="#">CONTACT US </a></li>
+             <input class="mobileinput  tabinput lapinput"  type="text" placeholder="&#xf067;&nbsp;&nbsp; ADD YOUR LISITING" id="addlist">
 
          </ul>
         </div>
     </div>
         <div class="image">
                   <div class="container">
-                    <div class="text">
-                        <fieldset class="field">
-                            <legend>sign in from</legend>
+                    <div class="formtext">
+                        <fieldset class="signinform">
+                            <legend class="setlegand">sign in from</legend>
                            <form action="program6.html" class="formadj">
-                           <table class="pos">
+                           <table>
                             <tr>
                                  <td> <label for="text">Enter your name:</label></td>
-                                 <td> <input type="text" placeholder="FRIST NAME"></td>
+                                 <td> <input type="text" placeholder="FRIST NAME" required></td>
                              </tr>
                                 <tr>
                                   <td> <label for="text">Enter your surname:</label> </td>
-                                    <td><input type="text" placeholder="SUR NAME"></td>
+                                    <td><input type="text" placeholder="SUR NAME" required></td>
                                   </tr>
                                   <tr> 
                                    <td> <label for="Email">Enter your Email:</label> </td>
-                                   <td><input type="text" placeholder="cha@gmail.com"></td>
+                                   <td><input type="text" placeholder="cha@gmail.com" required></td>
                                 </tr>
                                 <tr>
                                <td><label for="password">Enter your password:</label> </td>
-                                <td><input type="password"></td>
+                                <td><input type="password" required></td>
                                </tr>
                                 <tr>
                                   <td> <label for=" text"> Gender:</label></td>
-                                 <td class="tdadj"> <input type="radio">Female  <input type="radio">Male <input type="radio">custom </td>
+                                 <td class="tdadj"> <input type="radio"  name="gender" value="male" required>male  <input type="radio" name="gender" value="female">female <input type="radio" name="gender" value="other">custom </td>
                               </tr>
                                 <tr>
                                        <td> <label for="DOB">Date of Birth:</label> </td>
-                                          <td> <input type="date"> </td>
+                                          <td> <input type="date" required> </td>
                                 </tr>
                                   <tr>
                                         <td> <label for="place">place:</label> </td>
-                                       <td> <input type="text"> </td>
+                                       <td> <input type="text" required> </td>
                                   </tr>
                                     <tr>
                                          <td> <label for="text">Select course:</label></td>
                                               <td> 
-                                                     <select name="course" id="course">
+                                                     <select name="course" id="course" required>
                                                         <option value="java"> JAVA</option>
                                                         <option value="python">PYTHON</option>
                                                         <option value="c"> C</option>
@@ -82,7 +82,7 @@
                                             <tr>
                                   <td> <label for="mode">MODE:</label> </td>
                                      <td>
-                                               <select name="mode" id="mode">
+                                               <select name="mode" id="mode" required>
                                                   <option value="online">ONLINE</option>
                                                 <option value="offline">OFFLINE</option>
                                                </select>
@@ -95,7 +95,7 @@
                      </form>
                       </fieldset>
                  </div>  
-                 <div class="img">
+                 <div class="image2">
                     <img src="people.jpg" alt="people" class="image1 ">
                     <h3 class="first-txt">SEARCHING FOR PLACES</h3>
                     <h3 class="second-txt">ALL PLACES ARE GOOD</h3>

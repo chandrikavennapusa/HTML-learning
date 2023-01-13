@@ -1,7 +1,7 @@
-.field{
+.signinform{
    position: absolute;
-   left: 66px;
-   
+   left: 142px;
+   background: white;
    top: 73px;
    
 }
@@ -19,7 +19,7 @@
     position: absolute;
     margin-top: 0px;
 }
-li{
+.list1{
     list-style-type: none;
     display: inline-block;
     padding: 10px 10px;
@@ -28,22 +28,30 @@ li{
     text-decoration: none;
     margin: 20px;
 }
+#addlist{
+    border: none;
+    font-family:FontAwesome;
+    width: 182px;
+    margin-left: 89px;
+    font-size: 15px;
+}
+
 a{
     text-decoration: none;
 }
-.set{
+.setheading1{
     top: -6px;
     position: absolute;
     left: 264px;
     top: 93px;
 
 }
-.order{
+.heading{
     position: relative;
-    top: -78px;
+    top: -102px;
 }
 @media (max-width:1024px) and (min-width:768px){
-.order{
+.heading{
     position: absolute;
     left: -26px;
     top: -77px;
@@ -60,10 +68,10 @@ a{
     height: 21px;
     font-family: FontAwesome;
 }
-.field{
+.signinform{
     position: absolute;
     top: 77px;
-    left: 0px;
+    left: 149px;
 }
 
 }
@@ -74,16 +82,19 @@ a{
         background-size: cover;
         padding-left: 150px;
         content: "";
-        width: 100%;
         height: 1000px;
         position: absolute;
         top: 80px;
-        margin: 3%;
-        position: relative;
+        position: absolute;
+        left: -46px;
+        margin: 0px;
+      width: 1571px;
         
 }
 .image1{
-    
+    left: -458px;
+    top: 0px;
+    position: absolute;
         border-radius: 24px;
         border: 2px solid;
         height: 295px;
@@ -95,7 +106,7 @@ a{
     justify-content: center
   }
   
-  .img {
+  .image2{
     max-width: 100%;
     max-height:100%;
     right: 136px;
@@ -106,25 +117,25 @@ a{
 
 .first-txt {
     position: absolute;
-    top: 17px;
-    left: 20px;
+    top: -14px;
+    left: -408px;
     color:green;
 }
 
 .second-txt {
     position: absolute;
-    left: 40px;
+    left: -399px;
     top: 205px;
     color: gold;
 }
   
-  .text {
+  .formtext {
     font-size: 20px;
     padding-left: 20px;
     
   }
   @media (max-width:666px) and (min-width:320px){
-    .order{
+    .heading{
         top: -46px;
     display: flex;
     left: -283px;
@@ -132,12 +143,12 @@ a{
     color: black;
     font-size: 17px;
     }
-    .field{
+    .signinform{
         position: absolute;
         font-size: 19px;
     padding: 27px;
     top: 63px;
-    left: 37px;
+    left: 112px;
     }
     .mobileinput{
         padding: 0px;
@@ -155,7 +166,7 @@ a{
     }
     .image{
         position: absolute;
-        width: 979px;
+        width: 1213px;
         top: 129px;
     }
     .image1{
@@ -171,13 +182,13 @@ a{
 .second-txt{
     left: -250px;
 }
-li{
+.list1{
     font-size: 20px;
 }
 }
 
 @media (max-width:768px) and (min-width:666px){
-    .order{
+    .heading{
         position: relative;
         left: -304px;
     top: -56px;
@@ -196,48 +207,47 @@ li{
         width: 127px;
         position: relative;
     }
-    .field{
+    .signinform{
         position: relative;
     width: 0px;
     top: 113px;
-    left: -260px;
+    left: -575px;
     }
-    td{
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        right: -11px;
-    left: 1px;
-    width: 339px;
-    height: 15px;
-    font-size: 13px;
-    top: -10px;
-    margin: 2px;
-    }
-    tr{
-        position: relative;
-    }
+    
     .formadj{
-        width: 278px;
-        height: 358px;
+        width: 503px;
+        height: 404px;
+        font-size: 26px;
     }
-    .pos{
-        position: relative;
+    .image2{
+        position: absolute;
+    top: 173px;
     }
     .tdadj{
         position: relative;
         display: inline;
     left: -20px;
     }
-    .img{
-        left: 362px;
+    .image{
+        left: 0px;
     position: absolute;
     display: inline;
-    top: 157px
+    top: 121px
     }
     .image1{
         position: absolute;
     top: -21px;
     height: 372px;
     }
+    .setheading1{
+        left: 693px;
+    top: 54px;
+    position: relative;
+    }
+}
+.setlegand{
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+    text-align: center;
 }

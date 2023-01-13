@@ -1,4 +1,4 @@
-li{
+.list1{
     list-style-type: none;
     display: inline-block;
     padding: 10px 10px;
@@ -7,24 +7,47 @@ li{
     text-decoration: none;
     margin: 20px;
 }
+.heading2{
+    position: relative;
+    top :15px;
+}
+ #headingline2{
+        padding: 20px;
+    position: relative;
+    top: 20px;
+}
+#headline3{
+    position: relative;
+    top: 14px;
+}
 .book{
     height: 50px;
     width: 50px;
 }
-.res{
+.searchingarea{
     display: inline-flex;
     position: relative;
-    left:-206px;
+    left: -170px;
+    margin: 28px;
 }
-
-div{
+#addlist{
+    font-family: FontAwesome;
+    border: none;
+    position: relative;
+    left: 100px;
+}
+.heading3{
     display: inline-block;
 }
-figure{
+.image2{
     display: inline-block;
     padding: 20px;
 }
-.next{
+.image3{
+    height: 20px;
+    width: 20px;
+}
+.seticons{
     display: block;
     padding-left: 50px;
     top: 23px;
@@ -32,7 +55,7 @@ figure{
     left: -202px;
    
 }
-.center{
+.contentcenter{
     text-align: center;
    padding-bottom: 50px; 
    position: relative;
@@ -45,7 +68,7 @@ figure{
     position: relative;
     left: -226px;
 }
-.img{
+.image1{
     background-image:url(grey.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,113 +78,151 @@ figure{
     height: 1000px;
 }
 
-figcaption{
+  .captioncolor{
     color:white;
 }
  .sign{
-        padding: 10px;
-        margin: 10px;
+        
         background-color: grey;
-        width: 200px;
-        height: 50px;
+        position: absolute;
+        width: 157px;
+        padding: 1px;
+    height: 39px;
+    right: -409px;
+    top: -7px;
  }
    .size{
     color: white;
     font-size: 25px;
    }
- 
-.li{
-  
-   font-size :24px;
-   text-decoration: none;
-    
-}
-ul{
-    background-color: white;
-    
-    
-}
-#line{
+ #addlist:hover{
+    border: none;
+ }
+
+#heading1{
     display: inline;
     padding-left: 60px;
 }
 a{
     text-decoration: none;
 }
-li:link {
+.list1:link {
     color:black;
   }
-  li:visited {
+  .list1:visited {
    background-color: grey;
   }
-   li:hover {
+  .list1:hover {
    background-color:lightgray;
    text-decoration: none;
   }
-  li:active {
+  .list1:active {
    background-color:grey;
   }
-  input{
+  .textform{
     font-size: 20px;
     text-align: center;
   }
 a:hover{
     text-decoration: none;
 }
-  input:link {
+.textform:link {
     color:black;
   }
-  input:visited {
+  .textform:visited {
    background-color:lightgray;
   }
-  input:hover {
+  .textform:hover {
    background-color: lightblue;
   }
-  input:active {
+  .textform:active {
    background-color:grey;
   }
   @media(max-width:666px) and (min-width:320px){
-         .img{
+         .image1{
                  width: 1200px;  
                  height: 550px;
+                 position: relative;
+                 top: 25px;
             }
          .heading{
                   position: absolute;
-                  left: 23px;
+                  left: -1000px;
                   right: -575px;
               }
                  
-            .res{
+            .searchingarea{
                 display: inline-block;
                           position: absolute;
-                    
-                          left: 81px;
+                          left: 8px;
                           top: 135px;
                  }
-             .next{
+                 .heading2{
+                    top: 40px;
+                    left: -354px;
+                 }
+             .seticons{
                        position: relative;
                        display: inline-flex;
                        top: 450px;
-                       left: 0px;
+                       left: -400px;
                        top: 403px;
+                    }
+                    .contentcenter{
+                        left: 268px;
+                         position: relative;
                     }
                input{
                  margin-bottom: 10px;
                  padding: 10px;
                  }
+                 .sign{
+                    left: 866px;
+                  position: absolute;
+                  left: 1000px;
+                top: 0px;
+                 }
+                 #addlist{
+                    position: relative;
+                    left: 0px;
+                 }
 }
 @media(max-width:1024px) and (min-width:762px){
-.center{
+.contentcenter{
     position: relative;
     left: 2px;
   
 }
 .heading{
     position: relative;
-    left: 0px;
+    left: -232px;
 }
-.res{
-    left: -167px;
+.heading2{
+    position: relative;
+    top: 60px;
+    left: -258px;
+}
+#addlist{
+    position: relative;
+    left: 58px;
+}
+.image1{
+    position: relative;
+    top: 34px;
+}
+.sign{
+    position: absolute;
+    top: 0px;
+    right: -323px;
+}
+.seticons{
+    position: relative;
+    top: -11px;
+    left: -118px;
+    margin: 35px;
+}
+.searchingarea{
+    left: -119px;
     position: relative;
 }
 }
@@ -170,44 +231,71 @@ a:hover{
         position: absolute;
         left: -279px;
     }
-    .img{
+    .heading1{
+        position: absolute;
+    top: 8px;
+    }
+    .headingline{
+        position: absolute;
+    width: 479px;
+    left: 427px;
+    }
+    .headingline1{
+        position: absolute;
+        width: 479px;
+        left: 427px;
+        top: 43px;
+}
+    
+    .image1{
         width: 1117px;
         position: relative;
-        height: 350px;
+        height: 555px;
+    top: 15px;
     }
     .image{
         top: 98px;
     }
-    .center{
+    .contentcenter{
         position: relative;
         top: 139px;
         left: -66px;
     }
-    .next{
+    .seticons{
 display: grid;
 grid-gap: 16px;
 grid-template-columns: repeat(5,1fr);
 position: absolute;
 padding: 20px;
-    top: 107px;
-    left: 155px;
+top: 125px;
+left: 99px;
     }
     input{
         margin: 10px;
     } 
-    .res{
+    .searchingarea{
         display: grid;
         grid-gap: 16px;
         grid-template-columns: repeat(2,1fr);
         position: absolute;
-        left: 177px;
-        top: 10px;
+        left: 142px;
+    top: -23px;
     }
-    .si{
+    .heading2{
         position: relative;
-        left: -67px;
+        left: 0px;
+        top: 0px;
+    }
+    .sign{
+        position: absolute;
+        top: 0px;
+        right: -255px;
+    
     }
     }
     .contentset{
         text-align: center;
+        position: relative;
+        top: 60px;
     }
+   
