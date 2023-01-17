@@ -8,7 +8,11 @@
     <script src="example2.js"></script>
     <link rel="stylesheet" href="style1.css">
 </head>
-<body>
+<body onload="alert('welcome')">
+    <h3>demo on inline & internalscript</h3>
+    <button onclick="documnet.write('ToDay : '+new Date())">show Date</button>
+
+    
     <div id="id1"> can you changed!!!</div>
         <button onclick="elementbyid()"> yes </button>
 
@@ -31,5 +35,6 @@
     <div id="check1"> Okay !!!!</div>
     <button onclick="checkalert()"> check</button>
     <button onclick="checkprint()">print</button>
+
 </body>
 </html>

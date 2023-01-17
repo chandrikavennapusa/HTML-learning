@@ -28,5 +28,14 @@ function dec(){
     let a=10;
     b=a--;
     document.write(b +" decrement");
-}
+}s
 dec();
+
+var s =10;
+s+=20;
+document.write( "<br>"+"it is assignment operators"+" "+s);
+
+
+
+document.write(typeof 'hii');
+console.log(typeof 'blubber');

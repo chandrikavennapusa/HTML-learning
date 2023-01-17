@@ -32,3 +32,6 @@ function checkalert(){
 function checkprint(){
     print();
 }
+document.write("hi , i am head");
+document.write(" hi ,im body");
+
