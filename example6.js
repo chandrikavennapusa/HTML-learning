@@ -31,3 +31,4 @@ var body = " return Math.PI * radius * radius" ;
                     var isNumb = negate(is);
                     document.write(isNumb(5));
                     document.write(isNumb(NaN));
+

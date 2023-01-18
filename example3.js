@@ -31,3 +31,31 @@ do{
     document.write("javascript!!!"+"<br>");
     x++;
 }while(x<5);
+
+
+switch(new Date().getDay()){
+    case 0:      day="sunday";break;
+    case 1 :      day="monday";break;
+    case 2:       day="tuesday";break;
+    case 3:       day="wednesday"; break;
+    case 4:      day="tursday";break;
+    case 5:     day="friday";break;
+    case 6:     day="saturday";break;
+   
+}
+document.write("Today is " + day);
+document.write("<br>")
+
+let w = "0";
+switch (w) {
+  case 0:
+    text = "Off";
+    break;
+  case 1:
+    text = "On";
+    break;
+  default:
+    text = "No value found";
+}
+document.write(text);
+
