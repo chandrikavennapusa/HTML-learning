@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x ='java script'; //primitive datatype.
+        let y =new String("html")
+        let z="hello";
+       document.write(x.charAt(3)); //index represent
+       document.write(y.charAt(3));
+          document.write(x.indexOf('script'));
+          document.write("<br>");
+          document.write(x.lastIndexOf('a'));
+          document.write("<br>");
+          document.write(x.toUpperCase());
+          document.write("<br>");
+          document.write(x.concat(y,z));
+          document.write("<br>");
+          document.write(y.toLowerCase());
+          document.write("<br>");
+          document.write(y.length);
+          document.write("<br>");
+          document.write(x.trim(),z);
+          document.write("<br>");
+          document.write(x.split(''));
+          document.write("<br>");
+          document.write(x.startsWith('j'))
+          document.write("<br>");
+          document.write(x.endsWith('p'));
+          document.write("<br>");
+          document.write(x.slice(1,4));
+          document.write("<br>");
+          document.write(x.slice(-1));//take negative index also.
+          document.write(x.substring(2,6)); //only take positive numbers.and start and end.
+          document.write("<br>");
+          document.write(x.substr(2,6));//strat and length
+          document.write("<br>");
+          document.write(x.includes('tl'));
+
+
+          var a =`hello"world"what are `;
+          document.write(a);
+          let fn ="frist name";
+          let ln="last name";
+          let res =`hello ${fn} and ${ln}`;
+          document.write("<br>");
+          document.write(res);
+
+          let header ="Template literals";
+          let tags =["tea" ,"coffee","bru"];
+          let hmtl=`<h2>${header}</h2><ul>`;
+            for( let x of tags){
+                    html+=`<li>${x}</li>`;
+            }
+            html+=`</ul>`;
+            document.write(html);
+   </script>
+</body>
+</html>
