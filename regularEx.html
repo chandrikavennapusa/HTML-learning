@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+		div{
+			width:250px;
+			height:300px;
+			background:#66ffff;
+			margin:auto;
+			padding:50px;
+		}
+       
+		.laldiv{
+			background:#33ffff;
+			text-align:center;
+			width:300px;
+			margin:auto;
+		}
+	</style>
+
+	</style>
+
+</head>
+<body>
+       <div>
+        <h2>simple intrest problem.</h2>
+        <lable>principal:</lable>
+        <input type="text" id="principal" autofocus required placeholder="enter amount"><span>&#8377;</span>  <br>
+        <label for=""> time</label>
+        <input type="text " id="time" ><span>Year(s)</span><br>
+        <label for=""> rate of intrest</label>
+        <input type="text" id="rate"><span>(%)</span > <br>
+        <label for="">intrest:</label><br>
+        <button onclick="simpleintrest()">calculate:</button>
+        <output id="result"> </output>
+       </div>
+       <div class="laldiv">
+		<h2>Marks Report</h2>
+		<table>
+			<tr>
+				<td> <label>RollNo</label> </td>
+				<td> <input type="text" id="rno" name="rno"/> </td>
+			</tr>
+			<tr>
+				<td> <label>Stu Name</label> </td>
+				<td> <input type="text" id="sna" name="sna"/> </td>
+			</tr>
+			<tr>
+				<td> <label>HTML</label> </td>
+				<td> <input type="text" id="hm" name="hm"/>
+			</tr>
+			<tr>
+				<td> <label>CSS</label> </td>
+				<td> <input type="text" id="cm" name="cm"/>
+			</tr>
+			<tr>
+				<td> <label>JavaScript</label> </td>
+				<td> <input type="text" id="jm" name="jm"/>
+			</tr>
+			<tr >
+				<td colspan="2" > <button onclick="getResult()">get result</button> </td>
+			</tr>
+			<tr >
+				<td colspan="2" > <output id="total"></output> <bR>
+						<output id="average"></output> 
+				</td>
+                
+               
+
+			</tr>
+		</table>
+	</div>
+    
+<script src="example13.js"></script>
+</body>
+</html>
