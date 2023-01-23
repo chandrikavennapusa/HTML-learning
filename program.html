@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript.json"></script>
+
+    <style>
+        #title{
+            background-color: blueviolet;
+            color:white;
+            padding: 10px;
+            margin-top: 0px;
+            text-align: "center";
+            font-size: 40px;
+        }
+        .head{
+            color: blueviolet;
+        }
+        #box{
+                margin-left: 30px;
+        }
+      .list  {
+            font-size:24px;
+            margin-bottom:10px
+        }
+    </style>
+</head>
+<body>
+    <p id="title">json tutorial</p>
+    <div id="box">
+        <h1 class="head">students list:</h1>
+        <ul >
+             <li class="list"></li>
+             <li class="list" ></li>
+             <li class="list"></li>
+        </ul>
+    </div>
+    
+    <script>
+
+//         let person ={
+// "name":"chandrika",
+// "age":99,
+// "isDev":true,
+// "skills":["HTML","CSS","JAVA SCRIPT"],
+// "address":{"city":"hyd","state":"telangana"}
+
+// }
+// console.log(person.address.city);
+// console.log(person.skills[1]);
+var url='https://server.com/javascript.json';
+   fetch('url')
+    .then(Response => Response.json())
+   .then((sdata)=> {console.log(sdata)})
+
+
+//    fetch('https://server.com/javascript.json')
+
+// .then(response => response.json())
+// .then(response => console.log(JSON.stringify(response)))
+
+    </script>
+
+</body>
+</html>
