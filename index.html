@@ -7,9 +7,54 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="demo"></p>
     <script>
+        
+const txt = '{"name":"John", "age":30, "city":"New York"}'
+const obj = JSON.parse(txt);
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+
     fetch('http://127.0.0.1:5500/data.json')
         .then((response) => response.json())
-        .then((json) => console.log(json));</script>
+        .then((json) => console.log(json));
+
+var set1 = new Set();
+set1.add("hello");
+set1.add("hello");
+set1.add("5")
+const o = ["a","b","c"];
+set1.add(o);
+for(const box of set1){
+    document.write(box);
+    document.write("<br>");
+}
+document.write(set1.has("hii"));
+set1.delete(5)
+
+for(const box of set1){
+    document.write(box);
+    document.write("<br>");
+}
+
+ function add(s,t){
+   let res= s+t;
+   console.log("inside funtion");
+   return res;
+  
+ }
+var test =add(6,7);
+// test.then(function(data){console.log(data)});
+ console.log( test);
+ console.log("out side function");
+
+ window.setTimeout( function(){ alert("hello world"); } , 5000);
+	// window.setTimeout( function(){					
+	// 						window.location.href="http://www.facebook.com"}, 10000);
+
+     window.setInterval( function(){ alert("hello world"); }, 5000 );
+	window.clearInterval();
+</script>
+<h2> demo on window methods </h2>
+	
 </body>
 </html>
