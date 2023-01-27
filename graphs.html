@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="myPlot" style="width: 100%; max-width: 700px"></div>
+    <div id="myPlot1" style="width: 100%; max-width: 700px"></div>
+    <div id="myPlot2" style="width: 100%; max-width: 700px"></div>
+    <div id="myPlot3" style="width: 100%; max-width: 700px"></div>
+    <div id="myPlot4" style="width: 100%; max-width: 700px"></div>
+    <canvas
+      id="mycanvas"
+      width="400"
+      height="400"
+      style="border: 1px solid grey"
+    ></canvas>
+    <script>
+      var canvas = document.getElementById("mycanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "red";
+      ctx.transform(1, 0, 0, -1, 0, canvas.height);
+
+      canvas.height = canvas.width;
+
+      const xMax = canvas.height;
+      const yMax = canvas.width;
+      let scope = 1.2;
+      let intercept = 70;
+
+      const xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+      const yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+      for (let i = 0; i < xArray.length - 1; i++) {
+        let x = (xArray[i] * xMax) / 150;
+        let y = (yArray[i] * yMax) / 15;
+        ctx.beginPath();
+        ctx.ellipse(x, y, 3, 3, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.moveTo(0, intercept);
+      ctx.lineTo(xMax, f(xMax));
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+
+      function f(x) {
+        return x * scope + intercept;
+      }
+
+      var data = [
+        {
+          x: xArray,
+          y: yArray,
+          mode: "lines",
+        },
+      ];
+      var layout = {
+        xaxis: {
+          range: [40, 160],
+          title: "square meters",
+        },
+        yaxis: { range: [5, 16], title: "price in millions" },
+        title: "House Prices vs. Size",
+      };
+      Plotly.newPlot("myPlot", data, layout);
+
+      var exp1 = "x";
+      var exp2 = "1.5*x";
+      var exp3 = "1.5*x + 7";
+
+      var x1Values = [];
+      var x2Values = [];
+      var x3Values = [];
+      var y1Values = [];
+      var y2Values = [];
+      var y3Values = [];
+
+      for (var x = 0; x <= 10; x += 1) {
+        x1Values.push(x);
+        x2Values.push(x);
+        x3Values.push(x);
+        y1Values.push(eval(exp1));
+        y2Values.push(eval(exp2));
+        y3Values.push(eval(exp3));
+      }
+      var data = [
+        { x: x1Values, y: y1Values, mode: "lines" },
+        { x: x2Values, y: y2Values, mode: "lines" },
+        { x: x3Values, y: y3Values, mode: "lines" },
+      ];
+      var layout1 = {
+        titile: "[y = " + exp1 + "][y =" + exp2 + "][y=" + exp3 + "]",
+      };
+      Plotly.newPlot("myPlot", data, layout1);
+
+      var xArray1 = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var yArray1 = [55, 49, 44, 24, 15];
+      var data1 = [{ x: xArray1, y: yArray1, type: "bar" }];
+      var layout2 = { titile: "World Wide WIne Production" };
+      Plotly.newPlot("myPlot1", data1, layout2);
+
+      var xArray2 = [55, 49, 44, 24, 15];
+      var yArray2 = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var data2 = [
+        {
+          x: xArray2,
+          y: yArray2,
+          type: "bar",
+          orientation: "h",
+          marker: { color: "rgba(255,0,0,0.6" },
+        },
+      ];
+      var layout3 = { title: "World Wide Wine Production" };
+      Plotly.newPlot("myPlot", data2, layout3);
+
+      var xArray3 = ["AP", "BMW", "CHEENI", "DP", "FRANCE"];
+      var yArray3 = [55, 49, 44, 24, 15];
+      var layout4 = { title: "World Wide Wine Production" };
+      var data3 = [
+        { labels: xArray3, values: yArray3, hole: 0.4, type: "pie" },
+      ];
+      Plotly.newPlot("myPlot2", data3, layout4);
+
+      var exp4 = "Math.sin(x)";
+      var x4Values = [];
+      var y4Values = [];
+      for (var x = 0; x <= 10; x += 0.1) {
+        x4Values.push(x);
+        y4Values.push(eval(exp4));
+      }
+
+      var data4 = [{ x: x4Values, y: y4Values, mode: "markers" }];
+      var layout5 = { title: "y = " + exp4 };
+      Plotly.newPlot("myPlot3", data4, layout5);
+    </script>
+  </body>
+</html>

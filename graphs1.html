@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+    <canvas id="myChart" style="width: 100%;max-width: 700px;"></canvas>
+    <canvas id="myChart1" style="width: 100%;max-width: 700px;"></canvas>
+    <canvas id="myChart2" style="width: 100%;max-width: 700px;"></canvas>
+    <canvas id="myChart3" style="width: 100%;max-width: 700px;"></canvas>
+   <script>
+        var xyValues =[{x:50 , y:7},
+                       {x:60 , y:8},
+                        {x:70 ,y:8},
+                        {x:80 , y:9},
+                        {x:90 , y:9},
+                        {x:100,y:9},
+                        {x:110,y:10},
+                        {x:120 , y:11},
+                        {x:130,y:14},
+                        {x:140,y:14},
+                        {x:150,y:15}   
+    ];
+    new Chart("myChart",{
+        type:"scatter",
+        data:{
+            datasets:[{
+
+                poinRadius:4,
+                pointBackgroundColor:
+                "rgb(0,0,255)",
+                data:xyValues
+            }]
+            },
+    options :{legend:{display:false},
+    scales:{xAxes:[{ticks:{min:40,max:160}}],
+   yAxes:[{ticks:{min:6 ,max:16}}],
+}}
+    });
+
+        var x1Values =[50,60,70,80,90,100,110,120,120,140,150];
+        var y1Values=[7,8,8,9,9,9,10,11,14,14,15];
+        new Chart("myChart1",{
+            type:"line",
+            data :{labels :x1Values ,
+            datasets:[{
+                fill:false ,
+                 lineTesion:0,
+            backgroundColor:"rgba(0,0,255,1.0)",
+            borderColor:"rgba(0,0,255,0.1)",
+            data:y1Values
+        }]
+    },
+    options:{legend:{display:false},
+                scales:{
+                    yAxes:[{ticks:{min :6,max:16}}],
+                }
+}
+    
+ } );
+
+ var x2Values = [100,200,300,400,500,600,700,800,900,1000];
+new Chart ("myChart2",{
+    type :"line",
+    data :{
+        labels:x2Values,
+        datasets:[{data:[860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+           borderColor:"red",
+           fill:false
+        },{
+            data:[1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor:"red",
+            fill:false
+        },{
+            data:[300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor:"blue",
+            fill:false
+        }]
+    },
+        options:{legend:{display:false}}
+
+
+});
+
+var x3Values =[];
+var y3Values =[];
+generateData("x * 2 + 7",0,10,0.5);
+new Chart ("myChart3",{type:"line",data:{labels:x3Values,datasets:[{fill:false,poinRadius:1,borderColor:"rgba(255,0,0,0.5)",
+data:y3Values}]
+},
+    options:{legend:{display:false},title:{display:true,text:"y = x * 2+7",
+fontSize:16}}
+});
+function generateData(value ,i1,i2,step = 1){
+    for(let x =i1 ; x<=i2 ;x+=step){
+        y3Values.push(eval(value));
+        x3Values.push(x);
+    }
+}
+
+var x4Values = ["itlay"]
+
+    </script>
+</body>
+</html>

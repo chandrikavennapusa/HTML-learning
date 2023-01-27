@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> name:</label>
+    <input type="text" id="name">
+    <label > LName:</label>
+    <input type="text" id="name1">
+    <button id="b1" onclick="f1()">submit</button>
+
+   
+
+    <table>
+        <tr>
+            <th>name:</th>
+            <th>Last:</th>
+        </tr>
+        <tr> 
+            <td id="b2"></td>
+            <td id="b3"></td>
+        </tr>
+
+        
+    </table>
+    
+    <script>
+       function f1(){
+        document.getElementById("b2").innerHTML = document.getElementById("name").value;
+        document.getElementById("b3").innerHTML = document.getElementById("name1").value;
+        }
+    </script>
+</body>
+</html>

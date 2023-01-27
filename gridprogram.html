@@ -1,72 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        @media(max-width:600px){
-            .row{
-                grid-template-areas: 'header header header header header header'
-                'left left middle middle right right'
-                'footer footer footer footer footer footer';
-            }
+      @media (max-width: 600px) {
+        .row {
+          grid-template-areas:
+            "header header header header header header"
+            "left left middle middle right right"
+            "footer footer footer footer footer footer";
         }
-        *{
-            box-sizing: border-box;
-        }
-        body{
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: green;
-        }
-        .header{
-            background-color: rgb(36, 109, 173);
-            grid-area: header;
-            height: 100px;
-            padding: 20px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background-color: green;
+      }
+      .header {
+        background-color: rgb(36, 109, 173);
+        grid-area: header;
+        height: 100px;
+        padding: 20px;
 
-            text-align: center;
-        }
-        .footer{
-            background-color: antiquewhite;
-            grid-area: footer;
-            height: 100px;
-            text-align: center;
-        }
-        .left,.right,.middle{
-            padding: 10px;
-            height: 300px;
-        }
-        .left{
-            grid-area: left;
-        }
-        .middle{
-            grid-area: middle;
-        }
-        .right{
-            grid-area: right;
-        }
-        .row{
-            display: grid;
-            grid-template-areas: 'header header header header header header'
-            'left left middle middle right right'
-            'footer footer footer footer footer footer';
-            background-color: azure;
-            height: 200px;
-        }
-
+        text-align: center;
+      }
+      .footer {
+        background-color: antiquewhite;
+        grid-area: footer;
+        height: 100px;
+        text-align: center;
+      }
+      .left,
+      .right,
+      .middle {
+        padding: 10px;
+        height: 300px;
+      }
+      .left {
+        grid-area: left;
+      }
+      .middle {
+        grid-area: middle;
+      }
+      .right {
+        grid-area: right;
+      }
+      .row {
+        display: grid;
+        grid-template-areas:
+          "header header header header header header"
+          "left left middle middle right right"
+          "footer footer footer footer footer footer";
+        background-color: azure;
+        height: 200px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="row">
-        <div class="header"><h1>header</h1></div>
-    
-        <div class="left" style="background-color: aliceblue;">111</div>
-        <div class="middle" style="background-color: brown;">2222</div>
-        <div class="right" style="background-color:grey;">333</div>
-    
-        <div class="footer"><h1>footer</h1></div>
-</div>
-</body>
+      <div class="header"><h1>header</h1></div>
+
+      <div class="left" style="background-color: aliceblue">111</div>
+      <div class="middle" style="background-color: brown">2222</div>
+      <div class="right" style="background-color: grey">333</div>
+
+      <div class="footer"><h1>footer</h1></div>
+    </div>
+  </body>
 </html>

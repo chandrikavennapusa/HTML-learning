@@ -1,46 +1,81 @@
 <html>
+    <head>
+      
+    </head>
     <body>
         <h4> SIGN UP</h4>
-        <form action="program6.html" target="_blank">
+        <form >
             <fieldset>
                 <legend>personal info</legend>
                 <small> it is quickly and easy</small><br>
                 <table>
  <tr> <td><label> frist name:</label></td><td><input type="text" id=" name" name="name" placeholder="Frist Name" > </td></tr>
-               <tr> <td> <label> surname:</label></td> <td><input type="text" id="name" name="name" placeholder="Surname" ></td></tr>
-<tr> <td><label>email:</label> </td> <td><input type="email " name="email" id="email" placeholder="email"> </td></tr>
- <tr> <td><label>phone no:</label></td><td><input type="tel name="ph" id="ph" placeholder="123-456-7890"> </td></tr>
- <tr> <td> <label>password</label></td><td><input type="password" id="password" name="password" placeholder=" New password"></td></tr>
-                <tr> <td><small> Date of Birth</small></td><td>  <input type="date" name="DOB" id="DOB" ></td></tr>
-<tr> <td> <small>GENDER</small></td><td> <label for="female">FEMALE</label>
-    <input type="radio" id="female" name="female">
+               <tr> <td> <label> surname:</label></td> <td><input type="text" id="namee" name="name" placeholder="Surname"></td></tr>
+<tr> <td><label>email:</label> </td> <td><input type="email " name="email" id="email" placeholder="email" > </td></tr>
+ <tr> <td><label>phone no:</label></td><td><input type="tel" name="ph" id="ph" placeholder="123-456-7890"> </td></tr>
+ <tr> <td> <label>password:</label></td><td><input type="password" id="password" name="password" placeholder=" New password"></td></tr>
+                <tr> <td><small> Date of Birth:</small></td><td>  <input type="date" name="DOB" id="DOB" ></td></tr>
+<tr> <td> <small>GENDER:</small></td><td> <label for="female">FEMALE</label>
+    <input type="radio" id="female" name="Gender">
     <label for="female">MALE</label>
-    <input type="radio" id="male" name="male">
+    <input type="radio" id="male" name="Gender">
     <label for="female">CUSTOM</label>
-    <input type="radio" id="custom" name="custom"><br></td></tr>
-            <tr> <td>  <label for="file">select file </label></td><td> <input type="file" if="file" name="file"></td></tr>
+    <input type="radio" id="custom" name="Gender"><br></td></tr>
+            <tr> <td>  <label for="file">select file:</label></td><td> <input type="file" id="file" name="file"></td></tr>
            <tr> <td> <small> by clicking the sing up page,you agree toth your tams...</small></td></tr>
             <tr> <td><input type="reset"></td></tr>
             </table>
        </fieldset>
        <fieldset>
-        <legend> course info</legend>
+        <legend> course info:</legend>
         <label for="course">course:</label>
-            <select>
+            <select id="Course">
                 <option>java</option>
                 <option> css</option>
                 <option>html</option>
                 <option> java script</option>
             </select><br> <br>
-            <label for="mode"> Delivery mode</label>
+            <label for="mode"> Delivery mode:</label>
             <input type="checkbox" id="mode" name="mode">
             <label> online</label>
-            <input type="checkbox" id="mode" name="mode">
+            <input type="checkbox" id="mode1" name="mode1">
             <label> offline</label><br>
             <lable> comments:</lable><br>
             <textarea name="text" id="text" cols="30" rows="05"> com</textarea>
                </fieldset>
-               <input type="submit">
+               <button type="submit" onclick="formsubmit()">submit</button>
        </form>
+       <table>
+        <tr><th>frist name:</th>
+            <th>surname:</th>
+            <th>email:</th>
+            <th>phone no:</th>
+            <th>password:</th>
+            <th>Date of Birth:</th>
+            <th>GENDER:</th>
+            <th>select file:</th>
+            <th>course info:</th>
+            <th>Delivery mode:</th>
+            <th>comments:</th>
+        </tr>
+        <tr>
+               <td id="name1"></td>
+               <td id="name11"></td>
+               <td id="email1"></td>
+               <td id="ph1"></td>
+               <td id="password1"></td>
+               <td id="DOB1"></td>
+               <td id="Gender1"></td>
+               <td id="file1"></td>
+               <td id="Course1"></td>
+               <td id="mode11"></td>
+               <td id="text1"></td>
+        </tr>
+       </table>
+
+   <script src="store.js"></script>
+            
+        
+      
     </body>
 </html>
