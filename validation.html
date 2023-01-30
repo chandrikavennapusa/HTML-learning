@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <title>Document</title>
+    <style>
+        form i {
+    margin-left: -30px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Sign in </h1>
+        
+        <form action="program5.html">
+            <p><label for="email">email</label>  <input type="email" value="mail" id="mail"></p>
+            <p>
+                <label for="password">password</label> 
+                 <input type="password"  id="idpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+                 <i class="bi bi-eye-slash" id="togglePassword"></i>
+            </p>
+           <button type="submit" id="submit" class="submit">Log In</button>
+        </form>
+    </div>
+
+            <script>
+                const togglePassword = document.querySelector("#togglePassword");
+                const Passw = document.querySelector("#idpassword");
+
+                togglePassword.addEventListener("click",function(e){
+     
+                    const type =  Passw .getAttribute("type") === "password" ? "text" : "password";
+                    Passw.setAttribute("type",type);
+                    this.classList.toggle("bi-eye");
+                });
+                const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+
+
+        function add(a,b){
+                    return a+b ;
+                }
+                 function call(a,b,add){
+                    return add(a,b);
+                 }
+
+                 document.write(call(2,3,add));
+
+                 class PersonClass {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  speak () { console.log('hi'); }
+}
+
+document.write(typeof PersonClass);
+        
+            </script>
+
+
+</body>
+               
+</html>

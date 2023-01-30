@@ -33,6 +33,30 @@
         document.getElementById("b2").innerHTML = document.getElementById("name").value;
         document.getElementById("b3").innerHTML = document.getElementById("name1").value;
         }
+
+       window.onerror = function code(){
+        var count=0;
+        return {
+            incr:function(){
+                count++;
+            },
+            create:function(){
+                document.write(count);
+            }
+        }
+    }
+
+    var c =code();
+    c.incr();
+    c.create();
+    c.create();
+                const friuts =["apple","banana","orange"];
+                friuts.forEach((valu , item)=>{document.write(valu +item) });
+                window.print();
     </script>
+
+<form>
+    <input type = "button" value = "Click Me" onclick = "code();" />
+ </form>
 </body>
 </html>
