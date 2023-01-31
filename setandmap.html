@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script> 
+   var set = new Set();
+    set.add("kamala");
+    set.add("kavitha");
+    set.add("kavaya");
+    set.add("kavitha");
+           
+            set.forEach((value)=>{
+                 document.write(value+"<br>");
+            })
+
+                // document.write(set.values());
+                    for( let x of set.values() ){
+                        document.write(x+"<br>");
+                    };
+
+
+        // document.write(set.keys());
+                        for(let y of set.keys()){
+                            document.write(y+"<br>");
+                        }
+                        for(let y of set.entries()){
+                            document.write(y+"<br>");
+                        }
+
+    for(var a of set){
+        document.write(a+"<br>");
+    }
+
+            let map = new Map();
+            map.set(1,"kkkk");
+            map.set(2,"llll");
+            document.write(map.get(1)+"<br>");
+           for(let [key,value] of map){
+            document.write(key +": "+ value);
+           }
+           document.write(map.size+"<br>");
+
+            localStorage.setItem("FN","kalyan");
+            document.write(localStorage.getItem("FN"));
+
+            function calls(one,two){
+                var on = 200;
+                var tw =300;
+               document.write(on,tw);
+            }
+            let on=10 ;
+            let tw=20;
+            document.write(on +","+tw);
+            calls(on,tw);
+            document.write(on +","+tw);
+
+            function call1(){
+                documnet.write();
+            }
+                var o = { 1:"ggg" ,2:"hh"};
+                
+    </script>
+</body>
+</html>

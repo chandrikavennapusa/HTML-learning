@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+                       arr:[{name:"kamala",models:[1,2,3]},
+                            {name:"kavitha",models:[4,5,6]}
+                           ],
+                        ob:{nani:1,china:2},
+                        fun:function lali(){return FN="fn"},
+                        vec:"car",
+                        car:"BMW",
+                        magi:"",
+                        get vech(){
+        return this.vec;
+       },
+       set lang(lang){
+                    this.magi=lang;
+       }
+        };
+        obj.lang="yahoo";
+        document.write(obj.magi);
+       document.write(obj.vech+"<br>");
+        for(let a in obj){
+            if(a == "ob"){
+                    for(let b in obj.ob){
+                        document.write(b+":"+obj.ob[b]+"<br>");
+                    }
+            }
+            else if(a == 'arr'){
+                for(let c in obj.arr){
+                    document.write(c+":"+obj.arr[c].name);
+                   for(let d in obj.arr[c].models){
+                    document.write(d+":"+obj.arr[c].models[d]+"<br>");
+                   }
+                }
+            }
+            else if( a == "fun"){
+                document.write(obj.fun()+"<br>");
+            }
+            else{
+                document.write(a+":"+obj[a]+"<br>");
+            }
+        }
+           
+
+                var per ={
+                    fristname:"kamal",
+                    age:10
+                };
+                per.getting=function(){return this.fristname+" ,"+this.age};
+                document.write(per.getting()+"<br>");
+
+                var obj1 = new Object();
+                obj1.apa="1";
+                obj1.arv="2";
+                obj1.aru="3";
+                for(let k in obj1){
+                    document.write( k+":"+obj1[k]);
+                }
+                function Obj2(id,name,sal){
+                    this.id=id;
+                    this.name=name;
+                    this.sal=sal;
+
+                }
+                Obj2.prototype.nation="english";
+                e = new Obj2(1,"chandrika",1200);
+                for(let d in e){
+                    document.write(d+":"+e[d]+"<br>");
+                }
+
+                let jay = {
+                  print:function()
+                    {
+                        document.write(`id${this.id}name${this.name}sal${this.sal}`);
+
+                    }          
+                                      }
+                var cre = Object.create(jay);
+                cre.id=20;
+                cre.name="chand";
+                cre.sal=100000;
+                document.write(cre.print()+"<br>");
+
+                var met = {};
+                Object.defineProperty(met,'name',{value: 42,
+  });
+               document.write(met.name);
+
+            function Repeat(name,id){
+                this.name=name;
+                this.id=id;
+            }
+
+                e =new Repeat("kaaa",22);
+               for(let g in e){
+                document.write(g.)
+                document.write(e[g]);
+                if()
+               }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
