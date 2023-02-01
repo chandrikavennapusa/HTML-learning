@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        function Emp(id,name){
+            this.id=id;
+            this.name=name;
+           
+        }
+        const emp1={
+          full: function(){
+                    return this.id+" "+this.name;
+          }
+          
+
+        };
+         stud= {
+            id :11,
+            name:"monika"
+        };
+        stu={
+            id:22,
+            name:"naveen"
+        }
+
+        document.write(emp1.full.call(stu)+"<br>");
+        document.write(emp1.full.call(stud)+"<br>");
+
+        function PerEmp(id,name,sound){
+            Emp.call(this,id,name);
+            this.sound=sound
+        }
+
+        let em = new Emp("2","sai");
+         let emp=new PerEmp(1,"navini","bow");
+         
+       for(let z in em){
+        document.write(z+";"+em[z]+"<br>");
+       }
+       for(let y in emp){
+        document.write(y+";"+emp[y]+"<br>");
+       }
+       function sum (a,b){
+        return a*b;
+       }
+       let sum1 = sum.call(this,10,20);
+       document.write(sum1+"<br>");
+
+      let  mca={ // object defination call()
+        FN:"prasana",
+        LS:"pppp",
+        age:"26"
+       };
+         function gain(){  // function defination
+            const str =`myname ${this.FN}lastname ${this.LS}and age ${this.age}`;
+            document.write(str+"<br>");
+         }
+         let val = gain.call(mca);
+
+                            let greet ={  // object defination on apply()
+                                 horry :"Horry",
+                                 borry:"Borry"
+                            };
+                            function green(wish,funny){
+                                let string = `${this.horry} wishes ${wish}and${funny} `;
+                               return string ;
+                            }
+
+                           let zz= green.apply(greet,["correct","yes"]);
+                            document.write(zz);
+
+                            // object definition
+
+                            let car ={
+                               sub:"bmw",
+                                description(){
+                                    return ` ${this.sub} and ${this.color}`;
+                                }
+                            };
+                            let bike = {
+                                sub :"bullet",
+                                color:"red"
+                            };
+// bike is borrowing description() method from car using apply() 
+let result = car.description.apply(bike);
+
+document.write(result);
+
+let arr1 =["red","green","yellow"];
+let arr2 =["pink","white","orange"];
+arr1.push.apply(arr1,arr2);
+document.write(arr1+" "+"<br>");
+       
+     var greek = {
+         name:"c",
+         article:"haven"
+     };
+     var greek1 = {
+        name:"java",
+        article:"heal"
+     };
+     function print(){
+         document.write(this.name+""+this.article);
+     }
+     var pr = print.bind(greek);
+        pr();
+
+                const  dog = {
+                     eat : "milk",
+                     sound:"bow"
+                };
+                const cat = {
+                    eat :"curd",
+                    sound : "mow mow"
+                };
+                function animal(){
+                    return ` ${this.eat} and ${this.sound} `;
+                }
+
+                var sem = animal.bind(dog);
+                document.write(sem());
+    </script>
+</body>
+</html>

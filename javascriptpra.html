@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let person ={      FristName:"lalitha",
+                          SecondName  : "baa",
+                          age :10,
+                          method:function(){ // function
+                            return this.FristName +this.SecondName +this.age;
+                          },
+                          marks:{  // object
+                                telugu:75, hindi:45,english:70
+                          },
+                          arr:[{name:"janu",models:[1,2,3]},{name:"hari",models:[4,5,6]}] // arr
+
+        };
+                person.university = "Yvu";
+                for(let v in person){
+                    if(v == "method"){
+                        document.write(person.method()+"<br>");
+                    }
+                     else if( v == "marks") {
+                                for(let y in person.marks){
+                                    document.write(y+" "+ person.marks[y]+"<br>");
+                                }
+                    }
+                    else if(v == "arr"){
+                        for(let z in person.arr){
+                            document.write(z+":"+person.arr[z].name+"<br>");
+                            for(let a in person.arr[z].models){
+                                document.write(a+":"+person.arr[z].models[a]+"<br>");
+                            }
+                        }
+                    }
+                    else{
+                        document.write(v+" :"+person[v]+"<br>");
+                    }
+
+                    
+                    
+                }
+
+                function person1(name,age,lang){
+                    this.name=name;
+                    this.age=age;
+                    this.language=lang
+                }
+                person1.prototype.nation="india";
+                let w = new person1("chandrika",24,"telugu");
+                for(let x in w){
+                    document.write(x+":"+w[x]+"<br>");
+                }
+
+                const myObject = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+for (let v in myObject){
+
+if(v == "fullName"){
+   document.write(myObject.fullName());
+   }
+
+}
+   function myfun(num,per,hostel){
+    this.roll=num;
+    this.per=per;
+    this.hostel=hostel;
+   }
+   let ser = new myfun(1,80,"penna");
+   document.write(ser.roll);
+   
+
+    </script>
+</body>
+</html>

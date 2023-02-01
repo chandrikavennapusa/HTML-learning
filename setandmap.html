@@ -48,21 +48,42 @@
             localStorage.setItem("FN","kalyan");
             document.write(localStorage.getItem("FN"));
 
-            function calls(one,two){
-                var on = 200;
-                var tw =300;
-               document.write(on,tw);
-            }
-            let on=10 ;
-            let tw=20;
-            document.write(on +","+tw);
-            calls(on,tw);
-            document.write(on +","+tw);
+            // function calls(one,two){
+            //     var on = 200;
+            //     var tw =300;
+            //    document.write(on,tw);
+            // }
+            // let on=10 ;
+            // let tw=20;
+            // document.write(on +","+tw);
+            // calls(on,tw);
+            // document.write(on +","+tw);
+            //     let myobj ={
+            //         value:10
+            //     }
 
-            function call1(){
-                documnet.write();
-            }
-                var o = { 1:"ggg" ,2:"hh"};
+
+                    let one=10;
+                    let two =20;
+                    function modify(on,tw){
+                        on = 30;
+                        tw=40;
+                        document.write(on+""+tw);
+                        return (on,tw);
+                    }
+                    document.write(one,two);
+                    modify(one,two);
+                    document.write(one,two);
+
+
+
+               let arr = [1,2,3,4];
+               function add( array,value){
+                array.push(value);
+               }
+               add(arr,5);
+               document.write(arr);
+            
                 
     </script>
 </body>

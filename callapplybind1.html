@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                        //function
+                                          function anmial(name,sound){
+                                            this.name=name;
+                                            this.sound=sound;
+                                          }
+
+                                          function dog(name,sound,eat){
+                                            anmial.call(this,name,sound);  // call 
+                                            this.eat=eat;
+                                          }
+                                               var  a = new dog("puppy","maw maw","biskets");
+                                               var b = new anmial("tommy","maa");
+                                           for(let aa in a){
+                                            document.write(a[aa]+"<br>");
+                                           }
+                                           for(let bb in b){
+                                            document.write(b[bb]+"<br>");
+                                           }
+
+
+ var obj = {
+     frist:"latha",
+     last:"radha"  //  give the values
+ };
+ function obj1(){
+       return `${this.frist} and ${this.last}`;  //function  return  the values
+ }
+        document.write(obj1.call(obj)+"<br>");
+
+
+
+                                           ani={ // object 
+                                            resu :function(){
+                                                return this.name +" "+this.sound; // object return the values
+                                            }
+                                          }
+
+                                          var animal1 = {
+                                              name : " cat",
+                                              sound:"mow"      
+                                          };
+                                         
+                                            document.write(ani.resu.apply(animal1));   // apply
+    const greet = {   // object
+     name :" rose",
+    smell:"good" 
+
+  };
+                                               function gre( colo){
+                                                 return `${this.name}${this.smell} ${colo} `;
+                                               }
+                                                        var x =gre.apply(greet,["red"]);
+                                                         document.write(x);
+
+
+
+
+                                                var greek1={  // object 
+                                                    sub:"java",
+                                                    time:2
+                                                }
+                                                var greek2 = {
+                                                    sub:"c+",
+                                                    time:3
+                                                }
+                                                var greek3 ={
+                                                    sub:"c",
+                                                    time:7
+                                                }
+                                                    function res(colow){
+                                                        return ` ${this.sub} and ${this.time} and ${colow}`;
+                                                    }
+
+                                                    var se = res.apply(greek1,["green"]);
+                                                    document.write(se);
+                                                   var s=  res.bind(greek1,["yellow"])
+                                                     document.write(s());
+
+
+
+      const sarrow = {
+          name :"donkey",
+          color:"ash",
+          result :  function (){
+    
+            document.write(`${this.name} and ${this.color}`);
+          }
+      }
+      setTimeout(sarrow.result.bind(sarrow),1000);
+                
+
+
+
+
+
+    </script>
+</body>
+</html>
