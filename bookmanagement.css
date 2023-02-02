@@ -1,0 +1,27 @@
+.formdetails{
+  position: relative;
+  display: none;
+  border: 2px solid black;
+  padding: 23px;
+  width: 360px;
+  margin: 25px;
+}
+.formsetting{
+    display: grid;
+    grid-template-columns: 120px 300px;
+    grid-gap: 10px;
+}
+.tablesetting{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 10px;
+}
+.btn{
+    position: relative;
+    left: 302px;
+    margin: 30px;
+}
+.btn1{
+    margin-left: 30px;
+}

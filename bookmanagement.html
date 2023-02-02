@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bookmanagement.css">
+   
+</head>
+<body>
+  
+        <div>
+                   <div class="btn">
+                    <button onclick="addbook()" class="btn1">Add Book</button>
+                    <button  class="btn1"> Search Book</button>
+                   </div>
+
+              
+          
+    
+    <div class="formdetails ">
+        <form class="formsetting">
+            <div>
+                <label for="Book Id">Book Id :</label>
+                </div>
+                <div>
+                <input type="text"  id="bookid" name="bookid" required>
+            </div>
+            <div>
+                <label for="Book Name">Book Name:</label>
+            </div>
+            <div>
+                <input type="text" id="bookname" name="bookname" required>
+            </div>
+            <div>
+                <label for="Author">Author:</label>
+            </div>
+            <div>
+                <input type="text" id="author" name="author" required>
+            </div>
+            <div>
+                <label for="Category">Category:</label>
+            </div>
+            <div>
+                <select name="category" id="category">
+                    <option >Adventure stories</option>
+                      <option >Classics</option>
+                      <option >Crime</option>
+                      <option >Fantasy</option>
+                      <option >Historical fiction</option>
+                      <option >Horror</option>
+                      <option >Short stories</option>
+                      <option >Thrillers</option>
+                     </select>
+            </div>
+           
+            <div>
+                <label for="SubCatogary">SubCatogary:</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CheckBox" id="CheckBox" >History
+                <input type="checkbox" name="CheckBox" id="CheckBox">Politics
+                <input type="checkbox" name="CheckBox" id="CheckBox">Memories
+            </div>
+            <div>
+                <label for="Status">Status:</label>
+            </div>
+            <div>
+                <input type="radio" name="Radio" id="Radio" required>Barrow
+                <input type="radio" name="Radio" id="Radio">Return
+            </div>
+            <div>
+                <label for="Price">Price:</label>
+            </div>
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <button>Save</button>
+                <button>Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <table class="tablesetting">
+            <tr><th  class="tablesetting">BOOK ID</th>
+                <th  class="tablesetting">BOOK Name </th>
+                <th  class="tablesetting">Author</th>
+                <th class="tablesetting">Category</th>
+                <th class="tablesetting">Price</th>
+                <th class="tablesetting">Status</th>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    
+
+    <script src="bookmanagement.js"></script>
+
+
+
+
+</body>
+</html>

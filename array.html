@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const  cars = ["bmw","saab","volvo"];
+        let x = cars.entries();
+        for(let z of x){
+            document.write(z);
+        }
+
+
+
+
+        // length property.
+        document.write("length of cars:"+cars.length+"<br>");
+        // sort of the array
+        document.write("sort of the cars:"+cars.sort()+"<br>");
+        //chaning the elements.
+        cars[1]="chandrika";
+        
+         // sort of the array
+         document.write("sort of the cars:"+cars.sort()+"<br>");
+        document.write(cars+"<br>");
+        let car = cars[1];
+        document.write(car+"<br>");
+        //Accesing elements .
+        cars.forEach(element => {
+            document.write(element+"accesing array")
+        });
+        for(let a of cars){
+            document.write(a +"<br>");
+        };
+        const bike = new Array("hero","pulser","bullet");
+        for(let b of bike){
+            document.write(b+"<br>");
+        }
+
+    // push method
+    cars.push("dog");
+    //shift
+    cars.shift("cat");
+              
+
+
+    </script>
+</body>
+</html>

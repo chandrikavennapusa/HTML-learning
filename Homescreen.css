@@ -1,0 +1,45 @@
+#image{
+    position: relative;
+    height: 80px;
+    width: 100px;
+}
+#heading{
+    position: relative;
+    float: right;
+    right: 500px;
+}
+#image1{
+    width: 1500px;
+    height: 300px;
+    position: relative;
+}
+.link{
+    position: relative;
+    margin: 261px;
+    border: 10px;
+}
+.homepage{
+    position: absolute;
+    display: grid;
+    grid-template-areas: "head"
+                         "staticimage" 
+                         "hyperlink""hyperlink"
+                         "footer";
+                         grid-gap: 20px;
+  
+}
+.head{
+    grid-area: head;
+}
+.staticimage{
+    grid-area: staticimage;
+}
+.hyperlink{
+    grid-area: hyperlink;
+  
+}
+.footer{
+    grid-area: footer;
+    align-items: center;
+  justify-items: center
+}
