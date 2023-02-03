@@ -12,7 +12,7 @@
   
         <div>
                    <div class="btn">
-                    <button onclick="addbook()" class="btn1">Add Book</button>
+                    <button onclick="addbook1()" class="btn1">Add Book</button>
                     <button  class="btn1"> Search Book</button>
                    </div>
 
@@ -25,7 +25,7 @@
                 <label for="Book Id">Book Id :</label>
                 </div>
                 <div>
-                <input type="text"  id="bookid" name="bookid" required>
+                <input type="number"  id="bookid" name="bookid" required>
             </div>
             <div>
                 <label for="Book Name">Book Name:</label>
@@ -64,33 +64,37 @@
                 <input type="checkbox" name="CheckBox" id="CheckBox">Memories
             </div>
             <div>
-                <label for="Status">Status:</label>
-            </div>
-            <div>
-                <input type="radio" name="Radio" id="Radio" required>Barrow
-                <input type="radio" name="Radio" id="Radio">Return
-            </div>
-            <div>
                 <label for="Price">Price:</label>
             </div>
             <div>
-                <input type="text">
+                <input type="number" id="price">
+           
             </div>
             <div>
-                <button>Save</button>
-                <button>Cancel</button>
+                <label for="Status">Status:</label>
+            </div>
+            <div>
+                <input type="radio" name="Radio" id="Radio" required value="Barrow">Barrow
+                <input type="radio" name="Radio" id="Radio" value="Return">Return
+            </div>
+            
+            <div>
+                <input type="button" value="save" onclick="addbook2()">
+               <input type="button" value="cancel" onclick="clearfield()">
             </div>
         </form>
     </div>
     <div>
-        <table class="tablesetting">
-            <tr><th  class="tablesetting">BOOK ID</th>
-                <th  class="tablesetting">BOOK Name </th>
-                <th  class="tablesetting">Author</th>
-                <th class="tablesetting">Category</th>
-                <th class="tablesetting">Price</th>
-                <th class="tablesetting">Status</th>
-            </tr>
+        <table class="tablesetting" id="book1">
+                <tr>
+                    <th  class="tablesetting">BOOK ID</th>
+                    <th  class="tablesetting">BOOK Name </th>
+                    <th  class="tablesetting">Author</th>
+                    <th class="tablesetting">Category</th>
+                    <th class="tablesetting">Price</th>
+                    <th class="tablesetting">Status</th>
+                </tr>
+                
         </table>
     </div>
     </div>
