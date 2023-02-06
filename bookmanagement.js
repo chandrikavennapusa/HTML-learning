@@ -1,8 +1,10 @@
 function addbook1(){                                                                            // addbook click button
     document.querySelector(".formdetails").style.display = "block";
+    document.querySelector("#nobooks").style.display="none";
 }
 
 var book_list=[];
+
 var local_data = JSON.parse(localStorage.getItem("book store"));
 
 if(local_data !== null ){
@@ -89,7 +91,7 @@ function formsaving(){                                                          
             book_price:price,
             book_status:status ,
      }
-     var book_list_data =[];
+     let book_list_data =[];
      book_list_data.push(addbook);
      book_list.push(addbook);
     localStorage.setItem("book store",JSON.stringify(book_list));
@@ -109,10 +111,10 @@ function formsaving(){                                                          
        document.getElementById("Radio1").checked=false;
     }  
 
-   function tablestoredata(inputdata ){                                                                                     //table store data .
+   function tablestoredata(inputdata){                                                                               //table store data .
     if(inputdata !==undefined  && inputdata.length > 0){                                                                                   
         for(let add of inputdata){
-    var  tr = document.createElement('tr');
+var  tr = document.createElement('tr');
  var tbody = document.createElement('tbody');
  tr.appendChild(document.createElement('td')).innerHTML = add.book_id;
  tr.appendChild(document.createElement('td')).innerHTML = add.book_name;
@@ -124,9 +126,12 @@ function formsaving(){                                                          
   tr.appendChild(document.createElement('td')).innerHTML = `<button type="button" onclick='deletedata(${add.book_id});'> Remove </button>` ;
   tr.appendChild(document.createElement('td')).innerHTML = `<button type="button" onclick='editdata(${add.book_id});'> Edit </button>`;
   tbody.appendChild(tr);
- document.getElementById("book1").appendChild(tbody);
+  document.getElementById("book1").appendChild(tbody);
    }
    
+}
+else{
+    document.getElementById("nobooks").style.display="block";
 }
    }
    
@@ -150,22 +155,29 @@ function clearfield(){                                                          
 
 
   function searching(){                                                                    // searching for the book id or book name
-    //    document.getElementById("book1").innerHTML="";
    let searching= document.getElementById("search").value;
     let books=[];
     if(searching.length>0)
     try{
-        {
+        
             if(isNaN(searching)){
                 books.push(getbyName(searching));
                }else{
                 books.push(getbyid(searching)) ;
                }
+               
+             
+               searchbeforerow();
+            //    document.querySelector(".tablesetting").style.display = "none";
+            //    document.querySelector(".searchtablesetting").style.display = "block";
                tablestoredata(books);
-        }
+               
+
     }
     catch(e){
-        alert("the book_id or book_name is not there");
+        document.querySelector("#nobooks").style.display="block";
+        document.querySelector(".tablesetting").style.display = "none";
+        
     }
 }
 
@@ -249,10 +261,10 @@ function editdata(id){
     localStorage.setItem("id",id);
 
 }
+
     function deletedata(rindex){                                         // delete the row
      var filt = book_list.filter((a,i)=>{
         if(rindex == a.book_id){
-            console.log(a.book_id);
             book_list.splice(i,1);
             localStorage.setItem("book store",JSON.stringify(book_list));
             tablestoredata(book_list);
@@ -260,3 +272,13 @@ function editdata(id){
      })
      location.reload();
     }
+
+function searchbeforerow(){
+    
+    let table= document.getElementById("book1");
+   let rows= table.rows.length;
+   console.log("no of rows"+rows);
+   for(let j=rows ;j>1;j--){
+    document.getElementsByTagName("tr")[j-1].remove();
+   }
+}
