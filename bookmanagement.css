@@ -13,9 +13,12 @@
 }
 .tablesetting{
     border: 2px solid black;
-    border-collapse: collapse;
     padding: 10px;
     margin: 10px;
+}
+.tableheadingsetting{
+    text-align: center;
+    padding: 10px;
 }
 .btn{
     position: relative;
@@ -24,4 +27,14 @@
 }
 .btn1{
     margin-left: 30px;
+}
+#isdup{
+    display: none;
+    color: red;
+}
+#nobooks{
+position: relative;
+top: 98px;
+left: 271px;
+display: block;
 }

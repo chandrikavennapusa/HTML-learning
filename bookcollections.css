@@ -1,0 +1,16 @@
+#image{
+    position: relative;
+    height: 80px;
+    width: 100px;
+}
+#heading{
+    position: relative;
+    float: right;
+    right: 500px;
+}
+.bookarrangement{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 40px;
+
+}
