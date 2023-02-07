@@ -6,46 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bookmanagement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
 </head>
 <body id="body">
-    <!-- -->
         <div>
+            <div class="homepage">
+                <div class="head">
+                    <a href="Homescreen.html"> <img src="book2.jpg" alt="logo" id="image">  </a>
+                      <h1 id="heading"> BOOK MANAGEMENT SYSTEM</h1>
+                </div>
+
                    <div class="btn">
-                    <button class="btn1" onclick="addbook1()">Add Book</button>
-                    <input type="text" placeholder="SEARCHS BOOK" id="search" value="" onchange="searching(this.value)"  >
+                    <button class="btn1" id="addbook1">Add Book</button>
+                    <input type="search" placeholder="SEARCH.." id="search"  onkeyup="searching()">
+                    <button type="submit" id="searchbtn"><i class="fa fa-search"></i></button>
                     
                    </div>
-
-              
-          
-                   <p id="isdup">book id is alredy exists.</p>
+                   </div>
                    <p id="nobooks" >No BOOKS IS AVALIABLE.</p>
-    <div class="formdetails ">
-        <form class="formsetting" method="POST">
+
+    <div class="formdetails " id="openbook">
+
+         <form class="formsetting" >
             <div>
                 <label for="Book Id">Book Id :</label>
                 </div>
                 <div>
-                <input type="number"  id="bookid" value="" onchange="bookidvalidation(this.value)" name="bookid" required="required"/>
+                <input type="number"  id="bookid" value="" onchange="bookidvalidation(this.value)" name="bookid" required="required">
+                <span id="isdup">book id is alredy exists.</span>
             </div>
             <div>
                 <label for="Book Name">Book Name:</label>
             </div>
             <div>
-                <input type="text" id="bookname" name="bookname" required />
+                <input type="text" id="bookname" name="bookname" required>
             </div>
             <div>
                 <label for="Author">Author:</label>
             </div>
             <div>
-                <input type="text" id="author" name="author" required />
+                <input type="text" id="author" name="author" required>
             </div>
             <div>
                 <label for="Category">Category:</label>
             </div>
             <div>
-                <input list="books" name="category" id="category" required />
+                <input list="books" name="category" id="category" required>
                 <datalist id="books">
                     <option >Adventure stories</option>
                       <option >Classics</option>
@@ -63,31 +70,32 @@
                 <label for="SubCatogary">SubCatogary:</label>
             </div>
             <div> 
-                <input type="checkbox" name="CheckBox"  id="CheckBox" required  value="History"/>History
-                <input type="checkbox" name="CheckBox" id="CheckBox1" value="Politics">Politics
-                <input type="checkbox" name="CheckBox" id="CheckBox2" value="Memories">Memories
+                <input  type="checkbox" name="CheckBox" id="CheckBox"  value="History" >History
+                <input  type="checkbox" name="CheckBox" id="CheckBox1" value="Politics" >Politics
+                <input  type="checkbox" name="CheckBox" id="CheckBox2" value="Memories" >Memories
             </div>
             <div>
                 <label for="Price">Price:</label>
             </div>
             <div>
-                <input type="number" id="price" required />
+                <input type="number" id="price" required >
            
             </div>
             <div>
                 <label for="Status">Status:</label>
             </div>
             <div>
-                <input type="radio" name="status" id="Radio"  value="Barrow" required />Barrow
+                <input type="radio" name="status" id="Radio"  value="Barrow" required >Barrow
                 <input type="radio" name="status" id="Radio1"  value="Return">Return
             </div>
             
             <div>
-                <input type="button" value="save" id="save" onclick="formsaving()" />
-               <input type="button" value="cancel"id="cancel" >
+                <button type="submit" value="save" id="save" onclick="formsaving()">Save</button>
             </div>
+            <div><input type="button" value="cancel"id="cancel" ></div>
         </form>
     </div>
+       
     <div>
         <table class="tablesetting" id="book1">
                <thead>
@@ -106,24 +114,6 @@
         </table>
         
             </div>
-            <!-- <div>
-                <table class="searchtablesetting" id="book2">
-                       <thead>
-                        <tr>
-                            <th class="tableheadingsetting">BOOK ID</th>
-                            <th class="tableheadingsetting">BOOK Name </th>
-                            <th class="tableheadingsetting">Author</th>
-                            <th class="tableheadingsetting">Category</th>
-                            <th class="tableheadingsetting"> subCategory</th>
-                            <th class="tableheadingsetting">Price</th>
-                            <th class="tableheadingsetting">Status</th>
-                            <th class="tableheadingsetting"> Actions</th>
-                             <th class="tableheadingsetting"> changes:</th> 
-                        </tr>
-                       </thead>
-                </table>
-                
-                    </div> -->
     </div>
     <script src="bookmanagement.js"></script>
 </body>

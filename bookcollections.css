@@ -2,15 +2,21 @@
     position: relative;
     height: 80px;
     width: 100px;
+    border: 2px solid green;
 }
 #heading{
-    position: relative;
+    position: absolute;
+    background-color: lightcyan;
+    padding: 25px;
+    left: 154px;
+    top: -15px;
+    padding-left: 251px;
+    right: 14px;
     float: right;
-    right: 500px;
+   
 }
 .bookarrangement{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin-top: 40px;
-
 }
