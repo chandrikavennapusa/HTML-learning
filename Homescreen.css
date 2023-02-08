@@ -1,27 +1,32 @@
 #image{
     position: relative;
-    height: 80px;
-    width: 100px;
+    height: 81px;
+    width: 140px;
+    top: 8px;
     border: 2px solid green;
 }
 #heading{
-    position: absolute;
+     position: absolute;
     background-color: lightcyan;
-    padding: 25px;
-    left: 154px;
-    top: -15px;
-    padding-left: 251px;
-    right: 14px;
-    float: right;
+    text-align: center;
+    border: 2px solid black ;
+    left: 143px;
+    top: -14px;
+    width: 1321px;
+    
+    padding: 22px;
+
 }
 #image1{
+    top: 51px;
     width: 1500px;
     height: 300px;
     position: relative;
+    border: 2px solid greenyellow;
 }
 .link{
     position: relative;
-    margin: 261px;
+    margin: 178px;
     border: 10px;
 }
 .homepage{
@@ -42,10 +47,22 @@
 }
 .hyperlink{
     grid-area: hyperlink;
-  
+    position: relative;
+    top: 63px;
+    left: 75px;
 }
 .footer{
     grid-area: footer;
     align-items: center;
-  justify-items: center
+  justify-items: center;
+  background-color: lightblue;
+    text-align: center;
+    left: -5px;
+    position: relative;
+    top: 103px;
+    width: 1518px;
+}
+.bookbtn{
+    padding: 25px;
+    width: 301px;
 }

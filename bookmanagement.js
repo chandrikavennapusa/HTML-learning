@@ -1,16 +1,22 @@
+function addbook1(){       // addbook click butto
+    document.querySelector(".formdetails").style.visibility="visible";   
+  document.getElementById("search").disabled =true;    
 
-var add =document.getElementById("openbook"); 
-var btn =document.getElementById("addbook1");
-
-
-
- btn.onclick=function addbook1(){ 
-    
-add.style.display="block";                                                                       // addbook click button
-     
-    // document.querySelector("#nobooks").style.display="none";
+    document.querySelector("#nobooks").style.display="none";
+    disable();
 }
-
+function disable(){
+    for(i=0; i<document.getElementsByClassName("remove").length ;i++){
+        document.getElementsByClassName("remove")[i].disabled = true;
+        document.getElementsByClassName("edt")[i].disabled = true;
+    }
+}
+function enabled(){
+    for(i=0; i<document.getElementsByClassName("remove").length ;i++){
+        document.getElementsByClassName("remove")[i].disabled = false;
+        document.getElementsByClassName("edt")[i].disabled = false;
+    }
+}
 var book_list=[];
 
 var local_data = JSON.parse(localStorage.getItem("book store"));
@@ -70,13 +76,14 @@ function formsaving(){                                                          
     }
    
     let price1 =document.getElementById("price").value;
-   let status='';
-   if(document.getElementById("Radio").checked ){
-    status=document.getElementById("Radio").value ;
-    }else{
-     status=document.getElementById("Radio1").value;
+    
+  let status1 =document.getElementsByName("status");
+  var status='';
+  for(var status2 of status1){
+    if(status2.checked){
+        status=status+""+status2.value;
     }
-
+  }
        if(editdata1 == true){
         let id1=localStorage.getItem("id");
         let index1;
@@ -84,7 +91,8 @@ function formsaving(){                                                          
         let edit=data.find((x,index)=>{
         return x.book_id==id1 ?(index1=index,true):false;
         })
-          if(edit){
+
+               if(edit){
             data[index1].book_name =name;
             data[index1].book_author =author;
             data[index1].book_category =category;
@@ -95,7 +103,15 @@ function formsaving(){                                                          
             // location.reload();
         }
        }
+       else{
+        if(id.length == 0 || name.length ==0 || author.length ==0|| category.length==0 ||subcat.length==0 || price1.length==0 || status.length==0){
+          console.log();
+       }
          else{
+            if(id.length == 0 || name.length ==0 || author.length ==0|| category.length==0 ||subcat.length==0 || price1.length==0 || status.length==0){
+             console.log();
+           }
+           else{
         var addbook =
         {
             book_id:id,
@@ -112,21 +128,13 @@ function formsaving(){                                                          
      book_list.push(addbook);
     localStorage.setItem("book store",JSON.stringify(book_list));
     tablestoredata(book_list_data);
-    document.querySelector(".formdetails").style.display = "block";
-    document.getElementById("bookid").value = "";
-    document.getElementById("bookname").value = "";
-    document.getElementById("author").value = "";
-    document.getElementById("category").value="";   
-    document.getElementById("CheckBox").checked=false;
-    document.getElementById("CheckBox1").checked=false;
-    document.getElementById("CheckBox2").checked=false;
-    document.getElementById("price").value = "";
-    document.getElementById("Radio").checked=false;
-    document.getElementById("Radio1").checked=false;
+    document.querySelector(".formdetails").style.visibility="visible";
+        clearfield();
       }
+    }
      
        }
-      
+    }
 
 
    function tablestoredata(inputdata){                                                                               //table store data .
@@ -141,8 +149,9 @@ var  tr = document.createElement('tr');
  tr.appendChild(document.createElement('td')).innerHTML = add.book_sub_category;
  tr.appendChild(document.createElement('td')).innerHTML = add.book_price;
  tr.appendChild(document.createElement('td')).innerHTML = add.book_status;
-  tr.appendChild(document.createElement('td')).innerHTML = `<button type="button" onclick='deletedata(${add.book_id});'> Remove </button>` ;
-  tr.appendChild(document.createElement('td')).innerHTML = `<button type="button" onclick='editdata(${add.book_id});'> Edit </button>`;
+  tr.appendChild(document.createElement('td')).innerHTML = `<button type="button" class="remove" onclick='deletedata(${add.book_id});'><i class="material-icons">&#xe872;</i> </button>   / 
+                                                               <button type="button" class="edt" onclick='editdata(${add.book_id});'> <i class='fa fa-edit'></i></button> ` ;
+  
   tbody.appendChild(tr);
   document.getElementById("book1").appendChild(tbody);
    }
@@ -165,8 +174,9 @@ function clearfield(){                                                          
     document.getElementById("price").value = "";
     document.getElementById("Radio").checked=false;
     document.getElementById("Radio1").checked=false;
-
-  document.querySelector(".formdetails").style.display = "none";
+    location.reload();
+  document.querySelector(".formdetails").style.visibility="hidden";
+  enabled();
 }
   document.getElementById("cancel").addEventListener('click',clearfield);
 
@@ -203,7 +213,7 @@ function editdata(id){                                                          
     
 }
      }
-    document.querySelector(".formdetails").style.display = "block";
+     document.querySelector(".formdetails").style.visibility="visible"; 
     let name = document.getElementById("bookname").value;
     let author=document.getElementById("author").value;
     let category = document.getElementById("category").value;
@@ -227,15 +237,23 @@ function editdata(id){                                                          
 
 }
 
-    function deletedata(rindex){                                         // delete the row
-     var filt = book_list.filter((a,i)=>{
-        if(rindex == a.book_id){
-            book_list.splice(i,1);
-            localStorage.setItem("book store",JSON.stringify(book_list));
-            tablestoredata(book_list);
-        }
-     })
-     location.reload();
+    function deletedata(rindex){   
+
+       let isdelete= confirm('Are you sure?');
+
+       if(isdelete){
+        var filt = book_list.filter((a,i)=>{
+            if(rindex == a.book_id){
+                book_list.splice(i,1);
+                localStorage.setItem("book store",JSON.stringify(book_list));
+                tablestoredata(book_list);
+            }})
+ location.reload();
+       }
+       else{
+
+       }
+    
     }
 
 

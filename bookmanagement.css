@@ -1,22 +1,28 @@
 .formdetails{
+    top: -116px;
+    border-radius: 52px;
+    background-color: sandybrown;
+    left: 455px;
   position: relative;
-  display: none;
+  visibility: hidden;
   border: 2px solid black;
   padding: 23px;
-  width: 360px;
-  margin: 25px;
-  background-color: rgb(206, 190, 167);
+  width: 400px;
+  margin: 20px;
+ 
 }
 .formsetting{
     display: grid;
-    grid-template-columns: 120px 300px;
+    grid-template-columns: 150px 200px;
     grid-gap: 10px;
     
 }
 .tablesetting{
+    width: 1515px;
+    position: relative;
+    top:  111px;
     border: 2px solid black;
     padding: 10px;
-    margin: 10px;
     background-color: rgba(150, 212, 212, 0.4);
     border: 1px solid black;
     border-collapse: collapse;
@@ -29,28 +35,17 @@
     border-collapse: collapse;
    
 }
-.btn{
-    position: relative;
-    left: 302px;
-    margin: 30px;
-    
-}
-.btn1{
-    margin-left: 30px;
-    background-color: gray;
-    width: 102px;
-    height: 29px;
-    margin: 0px;
-}
+
+
 #isdup{
     display: none;
     color: red;
 }
 #nobooks{
 position: relative;
-top: 98px;
-left: 271px;
 display: none;
+ left: 666px;
+ top: 135px;
 }
 .searchtablesetting{
     display:none;
@@ -60,19 +55,21 @@ display: none;
 }
 #image{
     position: relative;
-    height: 80px;
-    width: 100px;
+    height: 81px;
+    width: 140px;
+    top: 8px;
     border: 2px solid green;
 }
 #heading{
     position: absolute;
     background-color: lightcyan;
-    padding: 25px;
-    left: 154px;
-    top: -15px;
-    padding-left: 251px;
-    right: 14px;
-    float: right;
+    text-align: center;
+    border: 2px solid black ;
+    float:right;
+    left: 140px;
+    padding: 19px;
+    width: 1379px;
+    top: -12px;
    
 }
 #save{
@@ -94,29 +91,73 @@ display: none;
     top: 3px;
     left: -50px;
 }
-#search{
-    background-color: gray;
-    position: absolute;
-    left: 140px;
-    border: 2px solid black;
-    width: 117px;
-    height: 24px;
-}
 input::placeholder {
     color: #fff;
   }
-    td {
+ td {
     border: 1px solid black;
     border-collapse: collapse;
+    text-align: center;
+    width :30px;
+    height: 40px;
   } 
-  #search:hover{
-    background-color: white;
-  }
-  #search:visited{
-    background-color:lightgreen;
-  }
-  #searchbtn{
+#canclebtn{
+    top: 7px;
+    right: 18px;
+    padding: 6px;
     position: absolute;
-    left: 229px;
-    height: 24px;
-  }
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+#formheading{
+    right: -67px;
+    left: 85px;
+    top: -12px;
+    margin: 0px;
+    position: relative;
+
+    color: green;
+}
+
+.btn{
+    position: relative;
+    top: 127px;
+    left: 1136px;
+    margin: 30px;
+    
+}
+.btn1{
+    width: 156px;
+    margin: 6px;
+    height: 33px;
+    background-color: lightsteelblue;
+    margin: 0px;
+    position: relative; 
+   
+    
+}
+#search{
+    top :0px;
+    height: 33px;
+    width: 163px;
+    background-color: lightsteelblue;
+    position: absolute;
+    border: 2px solid black; 
+    margin: 6px;
+    
+}
+.footer{
+    background-color: lightblue;
+      text-align: center;
+      position: relative;
+      width: 1518px;
+      padding: 4px;
+      top:49px;
+
+      
+
+}
+

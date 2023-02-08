@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bookmanagement.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body id="body">
         <div>
@@ -18,19 +22,44 @@
                 </div>
 
                    <div class="btn">
-                    <button class="btn1" id="addbook1">Add Book</button>
-                    <input type="search" placeholder="SEARCH.." id="search"  onkeyup="searching()">
-                    <button type="submit" id="searchbtn"><i class="fa fa-search"></i></button>
+                    <button class="btn1" onclick="addbook1()">Add Book</button>
+                    <input type="text" placeholder="SEARCH.." id="search"  onkeyup="searching()">
+                
                     
                    </div>
                    </div>
+
+                   <div>
+                    <table class="tablesetting" id="book1">
+                           <thead>
+                            <tr>
+                                <th class="tableheadingsetting">BOOK ID</th>
+                                <th class="tableheadingsetting">BOOK Name </th>
+                                <th class="tableheadingsetting">Author</th>
+                                <th class="tableheadingsetting">Category</th>
+                                <th class="tableheadingsetting"> subCategory</th>
+                                <th class="tableheadingsetting">Price</th>
+                                <th class="tableheadingsetting">Status</th>
+                                <th class="tableheadingsetting "> Actions</th>
+                                 <!-- <th class="tableheadingsetting"> changes:</th>  -->
+                            </tr>
+                           </thead>
+                    </table>
+                    
+                        </div>
                    <p id="nobooks" >No BOOKS IS AVALIABLE.</p>
-
-    <div class="formdetails " id="openbook">
-
+                  
+    <div class="formdetails">
+        
          <form class="formsetting" >
-            <div>
-                <label for="Book Id">Book Id :</label>
+               
+                    <div><h3 id="formheading"> ADD BOOKS</h3></div>
+                    <div>
+                       <a href=""> <span class="glyphicon" id="canclebtn"  onclick="clearfield()">&#xe014;</span></a>
+                    </div>
+               
+
+            <div> <label for="Book Id">Book Id :</label>
                 </div>
                 <div>
                 <input type="number"  id="bookid" value="" onchange="bookidvalidation(this.value)" name="bookid" required="required">
@@ -40,19 +69,19 @@
                 <label for="Book Name">Book Name:</label>
             </div>
             <div>
-                <input type="text" id="bookname" name="bookname" required>
+                <input type="text" id="bookname" name="bookname" required="required">
             </div>
             <div>
                 <label for="Author">Author:</label>
             </div>
             <div>
-                <input type="text" id="author" name="author" required>
+                <input type="text" id="author" name="author" required="required">
             </div>
             <div>
                 <label for="Category">Category:</label>
             </div>
             <div>
-                <input list="books" name="category" id="category" required>
+                <input list="books" name="category" id="category" required="required">
                 <datalist id="books">
                     <option >Adventure stories</option>
                       <option >Classics</option>
@@ -78,14 +107,14 @@
                 <label for="Price">Price:</label>
             </div>
             <div>
-                <input type="number" id="price" required >
+                <input type="number" id="price" required="required" >
            
             </div>
             <div>
                 <label for="Status">Status:</label>
             </div>
             <div>
-                <input type="radio" name="status" id="Radio"  value="Barrow" required >Barrow
+                <input type="radio" name="status" id="Radio"  value="Barrow" required="required" >Barrow
                 <input type="radio" name="status" id="Radio1"  value="Return">Return
             </div>
             
@@ -95,25 +124,10 @@
             <div><input type="button" value="cancel"id="cancel" ></div>
         </form>
     </div>
-       
-    <div>
-        <table class="tablesetting" id="book1">
-               <thead>
-                <tr>
-                    <th class="tableheadingsetting">BOOK ID</th>
-                    <th class="tableheadingsetting">BOOK Name </th>
-                    <th class="tableheadingsetting">Author</th>
-                    <th class="tableheadingsetting">Category</th>
-                    <th class="tableheadingsetting"> subCategory</th>
-                    <th class="tableheadingsetting">Price</th>
-                    <th class="tableheadingsetting">Status</th>
-                    <th class="tableheadingsetting"> Actions</th>
-                     <th class="tableheadingsetting"> changes:</th> 
-                </tr>
-               </thead>
-        </table>
-        
-            </div>
+    <div class="footer">
+    <p>created by chandrika vennapusa &copy;2023. </p>
+</div>    
+   
     </div>
     <script src="bookmanagement.js"></script>
 </body>
