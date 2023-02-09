@@ -15,6 +15,55 @@
         document.write("<br>"+arr);
         var x=arr.some((value)=>{return value>18});
         document.write(x);
+
+
+        a="like";
+        b=`like`;
+        document.write("<br>");
+        document.write(a==b);
+
+       function friut(){
+      
+            console.log("name");
+        }
+        friut.name="kavi";
+        friut();
+           
+        let obj ={name:"kdjs",age:233,nation:"jhfejrf"};
+        obj.language="english";
+        let v ={kk:"icjc"};
+        let obj1={...obj,...v};
+        console.log(obj1);
+        for(let s in obj1){
+            console.log(s +" "+obj1[s]) ;
+        }
+            var key =Object.keys(obj1);
+            key.forEach((key,index) =>{ console.log(`${key} :${obj1[key]}`);
+         } );
+
+        var  value = Object.values(obj1);
+        value.forEach((key)=>{console.log(`${key}`);});
+
+
+
+        Object.entries(obj1).forEach(([key ,value])=>{document.write(`${key} ${value}`);});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 </html>

@@ -1,20 +1,30 @@
-function addbook1(){       // addbook click butto
-    document.querySelector(".formdetails").style.visibility="visible";   
-  document.getElementById("search").disabled =true;    
-
-    document.querySelector("#nobooks").style.display="none";
+function addbook1(){   
+    document.querySelector("#nobooks").style.display="none";                                                                                                  // addbook click button
     disable();
 }
 function disable(){
+    document.querySelector(".formdetails").style.visibility="visible";   
+    document.getElementById("search").disabled =true;    
+    document.getElementById("image").style.pointerEvents="none";
+    document.getElementById("image").style.cursor="default";
     for(i=0; i<document.getElementsByClassName("remove").length ;i++){
-        document.getElementsByClassName("remove")[i].disabled = true;
-        document.getElementsByClassName("edt")[i].disabled = true;
+        document.getElementsByClassName("remove")[i].style.pointerEvents="none";
+        document.getElementsByClassName("remove")[i].style.cursor ="default";
+        document.getElementsByClassName("edt")[i].style.pointerEvents="none";
+        document.getElementsByClassName("edt")[i].style.cursor ="default";
     }
 }
 function enabled(){
+    document.querySelector(".formdetails").style.visibility="hidden";
+    document.getElementById("search").disabled =false;
+
+    document.getElementById("image").style.pointerEvents="auto";
+    document.getElementById("image").style.cursor="pointer";
     for(i=0; i<document.getElementsByClassName("remove").length ;i++){
-        document.getElementsByClassName("remove")[i].disabled = false;
-        document.getElementsByClassName("edt")[i].disabled = false;
+        document.getElementsByClassName("remove")[i].style.pointerEvents="auto";
+        document.getElementsByClassName("remove")[i].style.cursor ="pointer";
+        document.getElementsByClassName("edt")[i].style.pointerEvents="auto";
+        document.getElementsByClassName("edt")[i].style.cursor ="pointer";
     }
 }
 var book_list=[];
@@ -100,7 +110,6 @@ function formsaving(){                                                          
             data[index1].book_price=price1;
             data[index1].book_status=status;
             localStorage.setItem("book store",JSON.stringify(data));
-            // location.reload();
         }
        }
        else{
@@ -149,9 +158,8 @@ var  tr = document.createElement('tr');
  tr.appendChild(document.createElement('td')).innerHTML = add.book_sub_category;
  tr.appendChild(document.createElement('td')).innerHTML = add.book_price;
  tr.appendChild(document.createElement('td')).innerHTML = add.book_status;
-  tr.appendChild(document.createElement('td')).innerHTML = `<button type="button" class="remove" onclick='deletedata(${add.book_id});'><i class="material-icons">&#xe872;</i> </button>   / 
-                                                               <button type="button" class="edt" onclick='editdata(${add.book_id});'> <i class='fa fa-edit'></i></button> ` ;
-  
+  tr.appendChild(document.createElement('td')).innerHTML = `<a class="remove" onclick='deletedata(${add.book_id});'><i class="fa fa-trash"></i> </a>   
+    <a class="edt" onclick='editdata(${add.book_id});'> <i class='fa fa-edit'></i></a> ` ;
   tbody.appendChild(tr);
   document.getElementById("book1").appendChild(tbody);
    }
@@ -175,7 +183,6 @@ function clearfield(){                                                          
     document.getElementById("Radio").checked=false;
     document.getElementById("Radio1").checked=false;
     location.reload();
-  document.querySelector(".formdetails").style.visibility="hidden";
   enabled();
 }
   document.getElementById("cancel").addEventListener('click',clearfield);
