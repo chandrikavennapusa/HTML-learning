@@ -17,17 +17,17 @@
         <div>
             <div class="homepage">
                 <div class="head">
-                    <a href="Homescreen.html"> <img src="book2.jpg" alt="logo" id="image">  </a>
+                    <a href="Homescreen.html" id="image2"> <img src="book2.jpg" alt="logo" id="image">  </a>
                       <h1 id="heading"> BOOK MANAGEMENT SYSTEM</h1>
                 </div>
 
                    <div class="btn">
-                    <button class="btn1" onclick="addbook1()">ADD BOOK</button>
-                    <input type="text" placeholder="SEARCH.." id="search"  onkeyup="searching()">
-                
-                    
+                         <button class="btn1" onclick="addbook1()" >ADD BOOK</button>
+                           <input type="text" placeholder="SEARCH.." id="search"  onkeyup="searching()">
+                           <!-- <input type="text" placeholder="SEARCH.." id="search">
+                           <button  onclick="searching()">search</button> -->
                    </div>
-                   </div>
+                </div>
 
                    <div>
                     <table class="tablesetting" id="book1">
@@ -41,13 +41,16 @@
                                 <th class="tableheadingsetting">Price</th>
                                 <th class="tableheadingsetting">Status</th>
                                 <th class="tableheadingsetting "> Actions</th>
-                                
                             </tr>
                            </thead>
+                          
+                            <tr><td colspan="8" id="nobook">No BOOKS IS AVALIABLE.</td></tr>
+                           
+                        
                     </table>
                     
                         </div>
-                   <p id="nobooks" >No BOOKS IS AVALIABLE.</p>
+                        <span class="error" id="errmsg"></span>
                   
     <div class="formdetails">
         
@@ -62,8 +65,9 @@
             <div> <label for="Book Id">Book Id :</label>
                 </div>
                 <div>
-                <input type="number"  id="bookid" value="" onchange="bookidvalidation(this.value)" name="bookid" required="required">
+                <input type="text" id="bookid" value="" onchange="bookidvalidation(this.value)" name="bookid" required="required">
                 <span id="isdup">book id is alredy exists.</span>
+                <span id="digits"> accept only numbers.</span>
             </div>
             <div>
                 <label for="Book Name">Book Name:</label>

@@ -35,15 +35,16 @@
     border-collapse: collapse;
    
 }
+#digits{
+    display: none;
+    color: red;
+}
 #isdup{
     display: none;
     color: red;
 }
-#nobooks{
-position: relative;
-display: none;
- left: 666px;
- top: 135px;
+#nobook{
+ display: none;
 }
 .searchtablesetting{
     display:none;
@@ -134,7 +135,6 @@ display: none;
 #search{
     height: 33px;
     width: 163px;
-    background-color:lightgreen;
     position: absolute;
     border: 2px solid black; 
     margin: 6px;
@@ -151,8 +151,8 @@ display: none;
       top:120px;
 }
 .remove{
-    font-size:20px
-    ;color:red;
+    font-size:20px;
+    color:red;
     margin-right: 15px;
 }
 .edt{
@@ -167,4 +167,10 @@ display: none;
     height: 27px;
 
 }
-
+.error {
+    color: red;
+    position: absolute;
+    top: 245px;
+    left: 630px;
+    font-size: 36px;
+  }

@@ -1,12 +1,14 @@
-function addbook1(){   
-    document.querySelector("#nobooks").style.display="none";                                                                                                  // addbook click button
+function addbook1(){                                                                          //add book
+    document.querySelector("#nobook").style.display="none";                                                                                                  // addbook click button
     disable();
 }
 function disable(){
     document.querySelector(".formdetails").style.visibility="visible";   
     document.getElementById("search").disabled =true;    
-    document.getElementById("image").style.pointerEvents="none";
-    document.getElementById("image").style.cursor="default";
+
+    document.getElementById("image2").style.pointerEvents="none";
+    document.getElementById("image2").style.cursor="default";
+
     for(i=0; i<document.getElementsByClassName("remove").length ;i++){
         document.getElementsByClassName("remove")[i].style.pointerEvents="none";
         document.getElementsByClassName("remove")[i].style.cursor ="default";
@@ -18,8 +20,8 @@ function enabled(){
     document.querySelector(".formdetails").style.visibility="hidden";
     document.getElementById("search").disabled =false;
 
-    document.getElementById("image").style.pointerEvents="auto";
-    document.getElementById("image").style.cursor="pointer";
+    document.getElementById("image2").style.pointerEvents="auto";
+    document.getElementById("image2").style.cursor="pointer";
     for(i=0; i<document.getElementsByClassName("remove").length ;i++){
         document.getElementsByClassName("remove")[i].style.pointerEvents="auto";
         document.getElementsByClassName("remove")[i].style.cursor ="pointer";
@@ -30,6 +32,9 @@ function enabled(){
 var book_list=[];
 
 var local_data = JSON.parse(localStorage.getItem("book store"));
+if(local_data.length == 0){
+    document.getElementById("nobook").style.display="revert";
+}
 
 if(local_data !== null ){
 	if(local_data.length > 0){
@@ -39,7 +44,7 @@ if(local_data !== null ){
 	}
 }
 
-function bookidvalidation(value){                                                    //duplicate book id is  not allowed.
+function bookidvalidation(value){                                                                        //duplicate book id is  not allowed.
     if( isDublicate(value)){
         document.getElementById("isdup").style.display='block';
       
@@ -72,8 +77,17 @@ function  isDublicate(bookid){
     return duplicate;
 }
 
-function formsaving(){                                                                   // saving the form.
-    let id=document.getElementById("bookid").value;
+function formsaving(){ 
+                                       // saving the form.
+    var validNumber = /^[0-9]+$/;   
+    if(document.getElementById("bookid").value.match(validNumber)){
+        let id=document.getElementById("bookid").value;
+        document.getElementById("digits").style.display='none';  
+    }
+    else{
+        document.getElementById("digits").style.display='block';
+    }
+
     let name = document.getElementById("bookname").value;
     let author=document.getElementById("author").value;
     let category = document.getElementById("category").value;
@@ -113,35 +127,39 @@ function formsaving(){                                                          
         }
        }
        else{
-        if(id.length == 0 || name.length ==0 || author.length ==0|| category.length==0 ||subcat.length==0 || price1.length==0 || status.length==0){
-          console.log();
-       }
+        if(id.length == 0 || name.length ==0 || author.length ==0|| category.length==0 ||subcat.length==0 || price1.length==0 || status.length==0)
+            {
+                console.log();
+            }
          else{
-            if(id.length == 0 || name.length ==0 || author.length ==0|| category.length==0 ||subcat.length==0 || price1.length==0 || status.length==0){
-             console.log();
-           }
-           else{
-        var addbook =
-        {
-            book_id:id,
-            book_name:name,
-            book_author:author,
-            book_category:category,
-            book_sub_category:subcat,
-            book_price:price1,
-            book_status:status ,
-     }
+                 if(id.length == 0 || name.length ==0 || author.length ==0|| category.length==0 ||subcat.length==0 || price1.length==0 || status.length==0)
+                           {
+                           console.log();
+                           }
+                  else{
+                                   var addbook =
+                                                     {
+                                                        book_id:id,
+                                                        book_name:name,
+                                                        book_author:author,
+                                                        book_category:category,
+                                                        book_sub_category:subcat,
+                                                        book_price:price1,
+                                                        book_status:status ,
+                                                    }
 
-     let book_list_data =[];
-     book_list_data.push(addbook);
-     book_list.push(addbook);
-    localStorage.setItem("book store",JSON.stringify(book_list));
-    tablestoredata(book_list_data);
-    document.querySelector(".formdetails").style.visibility="visible";
-        clearfield();
-      }
-    }
-     
+                                                    let book_list_data =[];
+                                                    book_list_data.push(addbook);
+                                                    book_list.push(addbook);
+                                                   localStorage.setItem("book store",JSON.stringify(book_list));
+                                                   tablestoredata(book_list_data);
+                                                   document.querySelector(".formdetails").style.visibility="visible";
+                                                       clearfield();
+                     }
+                    
+                
+             }
+            
        }
     }
 
@@ -158,16 +176,17 @@ var  tr = document.createElement('tr');
  tr.appendChild(document.createElement('td')).innerHTML = add.book_sub_category;
  tr.appendChild(document.createElement('td')).innerHTML = add.book_price;
  tr.appendChild(document.createElement('td')).innerHTML = add.book_status;
-  tr.appendChild(document.createElement('td')).innerHTML = `<a class="remove" onclick='deletedata(${add.book_id});'><i class="fa fa-trash"></i> </a>   
+  tr.appendChild(document.createElement('td')).innerHTML = `<a class="remove" onclick='deletedata(${add.book_id});'><i class="material-icons">&#xe16c;</i></a>   
     <a class="edt" onclick='editdata(${add.book_id});'> <i class='fa fa-edit'></i></a> ` ;
   tbody.appendChild(tr);
   document.getElementById("book1").appendChild(tbody);
    }
 }
 else{
-    document.getElementById("nobooks").style.display="block";
+    document.querySelector("#nobook").style.display ="revert";
+
 }
-   }
+  }
    
  tablestoredata(book_list);
 
@@ -244,7 +263,7 @@ function editdata(id){                                                          
 
 }
 
-    function deletedata(rindex){   
+    function deletedata(rindex){                                                                                            // delete data
 
        let isdelete= confirm('Are you sure?');
 
@@ -257,29 +276,29 @@ function editdata(id){                                                          
             }})
  location.reload();
        }
-       else{
-
-       }
-    
-    }
-
-
-    function searching(){                                                                    // searching for the book id or book name
-        let searching= document.getElementById("search").value;
-        let table= document.getElementById("book1");
-        let tr =table.getElementsByTagName('tr');
-        for(var i=0;i<tr.length;i++){
-            let td =tr[i].getElementsByTagName('td')[0] ;
-            if(td){
-                let textvalue =td.textContent || td.innerHTML;
-                if(textvalue.indexOf(searching) > -1){
-                    tr[i].style.display="";
+    }    
+        function searching(){                                                                    // searching for the book id
+            let searching= document.getElementById("search").value;
+           
+            let table= document.getElementById("book1");
+            
+            let tr =table.getElementsByTagName('tr');
+            let noResults = true;
+            for(var i=0;i<tr.length;i++){
+                let td =tr[i].getElementsByTagName('td')[0] ;
+              
+                if(td){
+                    let textvalue =td.textContent || td.innerHTML;
+                   
+                    if(textvalue.indexOf(searching) > -1){
+                        noResults = false;
+                        tr[i].style.display="";
+                    }
+                    else{
+                        tr[i].style.display ="none";
+                    }
+                    
                 }
-                else{
-                    tr[i].style.display ="none";
-                }
-            }
+            }            
+            document.getElementById("errmsg").innerHTML = noResults ? 'No records found' : '';
         }
-    
-    }
-    
