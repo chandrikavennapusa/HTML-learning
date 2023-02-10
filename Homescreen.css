@@ -17,6 +17,10 @@
     padding: 22px;
 
 }
+.parag{
+    position: relative;
+    top: 57px;
+}
 #image1{
     top: 51px;
     width: 1500px;
@@ -66,4 +70,94 @@
     padding: 25px;
     width: 301px;
     background-color: aquamarine;
+}
+@media (max-width:647px) and (min-width:320px){
+#image{
+    position: relative;
+    width: 69px;
+    height: 37px;
+}
+
+    #heading{
+        top: -41px;
+    height: 21px;
+    padding: 8px;
+    width: 168px;
+        position: relative;
+        left: 71px;
+        font-size: 6px;
+     
+ 
+        text-align: center;
+
+    }
+
+    .hyperlink {
+        top: -79px;
+        left: -260px;
+    }
+    .footer {
+        left: -6px;
+    width: 264px;
+    font-size: 7px;
+        top: -48px;
+       
+       
+    text-align: center;
+    
+    }
+
+   .parag {
+    position: relative;
+    width: 264px;
+    top: -52px;
+    left: -8px;
+    }
+    #image1 {
+        width: 260px;
+        top: -48px;
+        left: -5px;
+        height: 160px;
+    }
+   .bookbtn{
+    position: relative;
+    width: 82px;
+    height: -70px;
+    font-size: 9px;
+    padding: 1px;
+    margin: 20px;
+    left: 133px;
+   }
+
+}
+@media (max-width:768px) and (min-width:666px){
+
+
+    #heading {
+        width: 876px;
+    }
+    #image1{
+        width: 1064px;
+        top: 25px;
+    }
+   .parag{
+    position: relative;
+    left: -6px;
+       width: 1068px;
+    top: 31px;
+   }
+   .footer{
+    width: 1257px;
+   }
+   .bookbtn {
+    width: 135px;
+    left: -185px;
+    padding: 4px;
+    position: relative;
+}
+.hyperlink{
+    left: 145px;
+}
+
+
 }

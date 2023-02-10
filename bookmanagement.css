@@ -35,6 +35,10 @@
     border-collapse: collapse;
    
 }
+#priceEle{
+    display: none;
+    color: red;
+}
 #digits{
     display: none;
     color: red;
@@ -173,4 +177,196 @@
     top: 245px;
     left: 630px;
     font-size: 36px;
+  }
+
+
+ @media (max-width:666px) and (min-width:320px){
+
+#heading{
+    left: 53px;
+    width: 128px;
+    height: 34px;
+    padding: 9px;
+    font-size: 9px;
+}
+#image{
+    width: 53px;
+    height: 35px;
+}
+
+.tablesetting {
+    width: 694px;
+}
+
+.footer {
+    left: 3px;
+    width: 179px;
+    font-size: 4px;
+    top: 154px;
+    padding: 0px;
+    height: 9px;
+}
+
+.btn{
+    margin-left: -49px;
+    left: 228px;
+    top: 10px;
+    position: relative;
+}
+.btn1{
+    margin-left: -112px;
+    font-size: 5px;
+    height: 11px;
+    left: 6px;
+    width: 36px;
+}
+#search{
+    position: relative;
+    width: 39px;
+    height: 10px;
+    font-size: 7px;
+    top: 1px;
+}
+.tableheadingsetting , td{
+    padding: 1px;
+    position: relative;
+    font-size: 3px;
+    width: 0px;
+}
+#nobook{
+    font-size: 4px;
+    height: 0px;
+}
+.tablesetting{
+    position: relative;
+    top: 18px;
+    width: 179px;
+}
+.formsetting{
+   
+    font-size: 7px;
+    display: grid;
+    position: relative;
+    left: 7px;
+    grid-row-gap: 1px;
+    
+    grid-template-columns: 53px 122px;
+}
+.formdetails{
+    position: relative;
+    display: block;
+    left: -15px;
+    top: 10px;
+    padding: 0px;
+   width: 200px;
+    height: 154px;
+}
+#bookid{
+    font-size: 4px;
+}
+#bookname{
+    font-size: 4px;
+}
+#author{
+    font-size: 4px;
+}
+#category{
+    font-size: 4px;
+}
+#CheckBox{
+    height: 7px;
+}
+#CheckBox1{
+    height: 7px;
+}
+#CheckBox2{
+    height: 7px;
+}
+#price{
+    font-size: 4px;
+}
+#Radio{
+    width: 6px;
+    height: 8px;
+}
+#Radio1{
+    width: 6px;
+    height: 8px;
+}
+#save{
+    width: 32px;
+    font-size: 7px;
+}
+#cancel{
+    width: 32px;
+    font-size: 7px;
+}
+
+#formheading {
+    font-size: 9px;
+    left: 68px;
+    top: 0px
+}
+#canclebtn {
+    padding: 2px;
+    border: 2px solid black;
+    height: 13px;
+    width: 14px;
+right: 6px;
+}
+
+.error{
+    position: absolute;
+    left: 82px;
+    top: 126px;
+    font-size: 19px;
+}
+.remove{
+    position: relative;
+    display: table-cell;
+    font: icon;
+    font-size: 6px;
+    top: -4px;
+    margin-right: 6px;
+}
+.material-icons{
+  
+}
+.edt{
+    position: relative;
+    content: "\f044";
+    font-size: 8px;
+    top: -18px;
+    position: relative;
+    left: 10px;
+}
+  }
+  @media (max-width:768px) and (min-width:666px){
+
+    #heading{
+        width: 721px;
+    }
+    .btn{
+        position: absolute;
+        left:515px;
+        top:100px;
+    }
+    .formdetails{
+        left: 190px;
+        top: 38px;
+    }
+.tablesetting{
+    top: 95px;
+    position: relative;
+    width: 851px;
+}
+.footer{
+    width: 860px;
+}
+
+
+
+
+
+
   }

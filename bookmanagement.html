@@ -24,8 +24,6 @@
                    <div class="btn">
                          <button class="btn1" onclick="addbook1()" >ADD BOOK</button>
                            <input type="text" placeholder="SEARCH.." id="search"  onkeyup="searching()">
-                           <!-- <input type="text" placeholder="SEARCH.." id="search">
-                           <button  onclick="searching()">search</button> -->
                    </div>
                 </div>
 
@@ -111,15 +109,15 @@
                 <label for="Price">Price:</label>
             </div>
             <div>
-                <input type="number" id="price" required="required" >
-           
+                <input type="text" id="price" required="required" >
+                <span id="priceEle">numbers only allow</span>
             </div>
             <div>
                 <label for="Status">Status:</label>
             </div>
             <div>
-                <input type="radio" name="status" id="Radio"  value="Barrow" required="required" >Barrow
-                <input type="radio" name="status" id="Radio1"  value="Return">Return
+                <input type="radio" name="status" id="Radio"  value="Barrow" required="required">Barrow
+                <input type="radio" name="status" id="Radio1"  value="Return" >Return
             </div>
             
             <div>

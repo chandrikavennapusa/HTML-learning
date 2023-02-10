@@ -48,10 +48,16 @@
 
         Object.entries(obj1).forEach(([key ,value])=>{document.write(`${key} ${value}`);});
 
+ function hello(cat,dog){
+    return this.name+" "+this.age+" "+ cat +" "+dog;
+ }
 
+ var obj11 ={name:"chandrika",age:25};
 
-
-
+document.write(hello.call(obj11,"english","english")+"<br>");
+document.write(hello.apply(obj11,["osolo","frog"])+"<br>");
+var x =hello.bind(obj11,"sds","djdc");
+document.write(x());
 
 
 
