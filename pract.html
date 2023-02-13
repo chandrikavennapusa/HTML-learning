@@ -59,10 +59,29 @@ document.write(hello.apply(obj11,["osolo","frog"])+"<br>");
 var x =hello.bind(obj11,"sds","djdc");
 document.write(x());
 
+    function callb(add,a,b){
+        return add(a,b);
+    }
 
+    function add(a,b){
+        document.write(a+b);
+    }
+    callb(add,12,23);
 
-
-
+    function abc(){
+        let i=1;
+        function xyz(){
+            document.write(i++);
+            document.write();
+        }
+        return xyz;
+    }
+ var x =abc();
+var y= xyz();
+ x();
+ x();
+y();
+y();
 
 
 

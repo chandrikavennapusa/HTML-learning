@@ -1,4 +1,4 @@
-function addbook1(){                                                                          //add book
+function addbook1(){                                                                        
     document.querySelector("#nobook").style.display="none";                                                                                                  // addbook click button
     disable();
 }
@@ -32,9 +32,7 @@ function enabled(){
 var book_list=[];
 
 var local_data = JSON.parse(localStorage.getItem("book store"));
-if(local_data.length == 0){
-    document.getElementById("nobook").style.display="revert";
-}
+
 
 if(local_data !== null ){
 	if(local_data.length > 0){
@@ -44,7 +42,7 @@ if(local_data !== null ){
 	}
 }
 
-function bookidvalidation(value){                                                                        //duplicate book id is  not allowed.
+function bookidvalidation(value){                                                                        
     if( isDublicate(value)){
         document.getElementById("isdup").style.display='block';
         document.getElementById("digits").style.display='none'; 
@@ -63,6 +61,9 @@ function bookidvalidation(value){                                               
         document.getElementById("isdup").style.display='none';   
     }
 }
+if(book_list.length === 0){
+    document.querySelector("#nobook").style.display ="revert";
+}
  
 function  isDublicate(bookid){
     let duplicate = false;
@@ -80,9 +81,9 @@ function  isDublicate(bookid){
 
 
 
-document.getElementById("Radio1").disabled = true;
-function formsaving(){   
-    var id;                                                            // saving the for
+document.getElementById("Radio1").disabled = true;                                                                                          
+function formsaving(){                                                                                      
+    var id;                                                           
     var validNumber = /^[0-9]+$/;   
     if(document.getElementById("bookid").value.match(validNumber)){
          id=document.getElementById("bookid").value;
@@ -91,7 +92,9 @@ function formsaving(){
     else{
         document.getElementById("digits").style.display='block';
         document.getElementById("bookid").value="";
+        
     }
+    
     
     let name = document.getElementById("bookname").value;
     let author=document.getElementById("author").value;
@@ -103,19 +106,23 @@ function formsaving(){
             subcat=subcat+""+checkbox.value;
         }
     }
-    var price1;                                                            // saving the for
-    var validNumber1 = /^\d+(?:[.,]\d+)*$/;   
+
+
+        var price1;                                                           
+    var validNumber1 = /^\d{0,8}(\.\d{1,4})?$/;   
     if(document.getElementById("price").value.match(validNumber1)){
          price1=document.getElementById("price").value;
         document.getElementById("priceEle").style.display='none';  
     }
     else{
-        document.getElementById("digits").style.display='none';  
+       
         document.getElementById("priceEle").style.display='block';
         document.getElementById("price").value="";
+         
     }
+         let status = document.getElementById("Radio").value;
 
-   let status = document.getElementById("Radio").value;
+
        if(editdata1 == true){
         let id1=localStorage.getItem("id");
         let index1;
@@ -127,25 +134,35 @@ function formsaving(){
             data[index1].book_category =category;
             data[index1].book_sub_category=subcat;
             data[index1].book_price=price1;
+
+            let status='';
+   if(document.getElementById("Radio").checked ){
+    status=document.getElementById("Radio").value ;
+    }else{
+     status=document.getElementById("Radio1").value;
+    } 
+     
             data[index1].book_status=status;
             localStorage.setItem("book store",JSON.stringify(data));
         }
-    }
+       }
         else{
-            if(id.length == 0 || name.length ==0 || author.length ==0|| category.length==0 ||subcat.length==0 || price1.length==0 || status.length==0)
-                {
-                    console.log();
-                }
-
+            
+ if(id.length == 0|| name.length == 0 || author.length ==0|| category.length== 0 ||subcat.length== 0 || price1.length==0|| status.length==0)
+ {
+     console.log();
+ }
+            
             
 
       
          else{
-                 if(id.length == 0 || name.length ==0 || author.length ==0|| category.length==0 ||subcat.length==0 || price1.length==0 || status.length==0)
-                           {
-                           console.log();
-                           }
-                  else{
+            
+ if(id.length == 0|| name.length == 0 || author.length ==0|| category.length== 0 ||subcat.length== 0 || price1.length==0|| status.length==0)
+ {
+     console.log();
+ }
+                 else{
                                    var addbook =
                                                      {
                                                         book_id:id,
@@ -173,6 +190,7 @@ function formsaving(){
     
     }
 
+
    function tablestoredata(inputdata){                                                                               //table store data .
     if(inputdata !==undefined  && inputdata.length > 0){                                                                                   
         for(let add of inputdata){
@@ -199,7 +217,7 @@ else{
    
  tablestoredata(book_list);
 
-function clearfield(){                                                                        // clear the form when i click cancel btn
+function clearfield(){                                                                       
     document.getElementById("bookid").value = "";
     document.getElementById("bookname").value = "";
     document.getElementById("author").value = "";
@@ -213,11 +231,12 @@ function clearfield(){                                                          
     location.reload();
   enabled();
 }
+
   document.getElementById("cancel").addEventListener('click',clearfield);
 
 var editdata1=false;
 
-function editdata(id){                                                                      //edit data
+function editdata(id){                                                                      
     editdata1=true;
     var table = document.getElementById("book1"),rindex;
      for( var i=0 ; i< table.rows.length; i++){
@@ -228,11 +247,12 @@ function editdata(id){                                                          
     document.getElementById("author").value = this.cells[2].innerHTML;
     document.getElementById("category").value = this.cells[3].innerHTML; 
 
-    if(this.cells[4].innerHTML === "History" ){
+    if(this.cells[4].innerHTML === "History"){
         document.getElementById("CheckBox").checked=true;
     }
     else if(this.cells[4].innerHTML === "Politics" ){
         document.getElementById("CheckBox1").checked=true;
+        
     }
     else{
         document.getElementById("CheckBox2").checked=true;
@@ -260,13 +280,16 @@ function editdata(id){                                                          
         }
     }
     let price =document.getElementById("price").value;
+
     document.getElementById("Radio1").disabled =false;
+
    let status='';
    if(document.getElementById("Radio").checked ){
     status=document.getElementById("Radio").value ;
     }else{
      status=document.getElementById("Radio1").value;
     }  
+
     localStorage.setItem("id",id);
 
 }
@@ -275,7 +298,7 @@ function editdata(id){                                                          
 
 
 
-    function deletedata(rindex){                                                                                            // delete data
+    function deletedata(rindex){                                                                                           
 
        let isdelete= confirm('Are you sure?');
 
@@ -294,7 +317,7 @@ function editdata(id){                                                          
 
 
 
-        function searching(){                                                                    // searching for the book id
+        function searching(){                                                                    
             let searching= document.getElementById("search").value;
            
             let table= document.getElementById("book1");

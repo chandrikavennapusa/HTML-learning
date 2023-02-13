@@ -39,40 +39,44 @@
     top:100px;
 }
 
-@media (max-width:666px) and (min-width:320px){
+
+@media  (min-width:320px) and (max-width:666px){
     #image{
-        width: 74px;
-    height: 46px;
+        width: 29px;
+    height: 28px;
     }
     #heading {
-        font-size: 9px;
-        left: 84px;
-        width: 193px;
-        top: 10px;
-        padding: 18px;
+        left: 40px;
+        width: 251px;
+        padding: 10px;
+        top: 13px;
+    font-size: 6px;
+    text-align: center;
+
 
     }
     #nobooks{
-        left: 191px;
-        left: 3px;
-    top: 16px;
+        top: 16px;
+        left: -54px;
+    font-size: 6px;
     }
     .footer {
-        padding: 1px;
-    width: 302px;
+        font-size: 7px;
+    width: 310px;
+        padding:1px;
     top: 465px;
       
     }
     #bookarrangement{
         position: relative;
     }    
-
+    
 
 }
 
 @media (max-width:768px) and (min-width:666px){
     #nobooks  {
-        display: block;
+      
         left: 402px;
         top: 188px;
     }

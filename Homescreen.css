@@ -71,7 +71,7 @@
     width: 301px;
     background-color: aquamarine;
 }
-@media (max-width:647px) and (min-width:320px){
+@media  (min-width:320px) and (max-width:647px){
 #image{
     position: relative;
     width: 69px;
@@ -79,42 +79,39 @@
 }
 
     #heading{
-        top: -41px;
+
+        font-size: 13px;
+    width: 387px;
+    top: -46px;
     height: 21px;
     padding: 8px;
-    width: 168px;
         position: relative;
         left: 71px;
-        font-size: 6px;
-     
- 
         text-align: center;
 
     }
 
     .hyperlink {
-        top: -79px;
-        left: -260px;
+        top: -33px;
+        left: -140px;
     }
     .footer {
         left: -6px;
-    width: 264px;
-    font-size: 7px;
-        top: -48px;
-       
-       
+        width: 482px;
+        font-size: 11px;
+        top: -3px;
     text-align: center;
     
     }
 
    .parag {
     position: relative;
-    width: 264px;
-    top: -52px;
+    width: 482px;
+    top: -27px;
     left: -8px;
     }
     #image1 {
-        width: 260px;
+        width: 477px;
         top: -48px;
         left: -5px;
         height: 160px;
@@ -130,33 +127,41 @@
    }
 
 }
-@media (max-width:768px) and (min-width:666px){
+@media (min-width:666px) and (max-width:768px){
 
 
     #heading {
-        width: 876px;
-    }
+       width: 2856px;
+       }
     #image1{
-        width: 1064px;
-        top: 25px;
+        width: 3035px;
+        height: 554px;
+        top: 130px;
     }
    .parag{
     position: relative;
-    left: -6px;
-       width: 1068px;
-    top: 31px;
+    top: 217px;
+    width: 3020px;
+    font-size: 36px;
    }
    .footer{
-    width: 1257px;
+    width: 3028px;
+    font-size: 39px;
+    top: 580px;
+   
    }
    .bookbtn {
-    width: 135px;
-    left: -185px;
-    padding: 4px;
+    padding: 17px;
+    width: 328px;
+    font-size: 31px;
+    left: -5px;
+  
     position: relative;
 }
 .hyperlink{
-    left: 145px;
+    left: 790px;
+    top: 400px;
+    left: 672px;
 }
 
 

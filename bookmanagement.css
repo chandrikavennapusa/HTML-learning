@@ -1,7 +1,7 @@
 .formdetails{
     top: -116px;
     border-radius: 10px;
-    background-color: sandybrown;
+    background-color: rgb(96, 177, 244);
     left: 567px;
   position: relative;
   visibility: hidden;
@@ -160,6 +160,8 @@
     margin-right: 15px;
 }
 .edt{
+    position:relative;
+    top:-3px;
     font-size: 20px;
     color: green;
 }
@@ -184,7 +186,7 @@
 
 #heading{
     left: 53px;
-    width: 128px;
+    width: 316px;
     height: 34px;
     padding: 9px;
     font-size: 9px;
@@ -200,38 +202,38 @@
 
 .footer {
     left: 3px;
-    width: 179px;
-    font-size: 4px;
     top: 154px;
-    padding: 0px;
-    height: 9px;
+    width: 364px;
+    font-size: 16px;
+    padding: -13px;
+    height: 24px;
 }
 
 .btn{
     margin-left: -49px;
-    left: 228px;
+    left: 393px;
     top: 10px;
     position: relative;
 }
 .btn1{
     margin-left: -112px;
     font-size: 5px;
-    height: 11px;
+    height: 14px;
     left: 6px;
-    width: 36px;
+    width: 52px;
 }
 #search{
     position: relative;
-    width: 39px;
-    height: 10px;
+    width: 51px;
+    height: 14px;
     font-size: 7px;
     top: 1px;
 }
 .tableheadingsetting , td{
     padding: 1px;
     position: relative;
-    font-size: 3px;
-    width: 0px;
+    font-size:8px;
+    
 }
 #nobook{
     font-size: 4px;
@@ -240,7 +242,7 @@
 .tablesetting{
     position: relative;
     top: 18px;
-    width: 179px;
+    width: 369px;
 }
 .formsetting{
    
@@ -255,7 +257,7 @@
 .formdetails{
     position: relative;
     display: block;
-    left: -15px;
+    left: 42px;
     top: 10px;
     padding: 0px;
    width: 200px;
@@ -329,14 +331,11 @@ right: 6px;
     top: -4px;
     margin-right: 6px;
 }
-.material-icons{
-  
-}
 .edt{
     position: relative;
     content: "\f044";
-    font-size: 8px;
-    top: -18px;
+    font-size: 16px;
+    top: 0px;
     position: relative;
     left: 10px;
 }
@@ -344,11 +343,11 @@ right: 6px;
   @media (max-width:768px) and (min-width:666px){
 
     #heading{
-        width: 721px;
+        width: 628px;
     }
     .btn{
         position: absolute;
-        left:515px;
+        left:426px;
         top:100px;
     }
     .formdetails{
@@ -358,10 +357,10 @@ right: 6px;
 .tablesetting{
     top: 95px;
     position: relative;
-    width: 851px;
+    width: 765px;
 }
 .footer{
-    width: 860px;
+    width: 770px;
 }
 
 

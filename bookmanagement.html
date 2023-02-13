@@ -65,7 +65,7 @@
                 <div>
                 <input type="text" id="bookid" value="" onchange="bookidvalidation(this.value)" name="bookid" required="required">
                 <span id="isdup">book id is alredy exists.</span>
-                <span id="digits"> accept only numbers.</span>
+                <span id="digits"> accept only positive numbers.</span>
             </div>
             <div>
                 <label for="Book Name">Book Name:</label>
@@ -83,8 +83,7 @@
                 <label for="Category">Category:</label>
             </div>
             <div>
-                <input list="books" name="category" id="category" required="required">
-                <datalist id="books">
+               <select  name="category" id="category" required="required">
                     <option >Adventure stories</option>
                       <option >Classics</option>
                       <option >Crime</option>
@@ -93,7 +92,7 @@
                       <option >Horror</option>
                       <option >Short stories</option>
                       <option >Thrillers</option>
-                </datalist>
+                </select>
                      
             </div>
            
