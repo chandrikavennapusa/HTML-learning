@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="win()">Open Window</button>
+    <script>
+        let obj={
+            fristname:"hello",
+            lastname:"suman",
+            fullname:function(){
+                return `${this.fristname} ${this.lastname}`;
+            }
+        };
+        delete obj.fristname;
+        obj.selection="kamal";
+        obj={...obj,communication:"english",power:"on"};
+let vari = obj.fullname();
+  console.log(vari);
+
+  for(let x in obj){
+    console.log(x);
+  }
+
+  function obj1(name,age,perment){
+        this.name=name;
+        this.age=age;
+        this.perment=perment;
+  }
+  obj1.prototype.nationality="india";
+  delete obj1.age;
+  let z= new obj1("hello","hii",'namste');
+  for(let x in z){
+    console.log(x+z[x]);
+  }
+let mm = {
+    mam:"good",
+    dad:"excellent"
+};
+
+  function fun(){
+    return `${this.mam} ${this.dad}`;
+  }
+  console.log(fun.call(mm));
+  let y=fun.bind(mm);
+  console.log(y());
+  function nam(){
+    let count=0;
+    function nam1(){
+       count++;
+        return count;
+    }
+    return nam1;
+  }
+  let a =nam();
+  console.log(a());
+  console.log(a());
+  console.log(a());
+
+function result (add,a,b){
+    return add(a,b);
+}
+function add(a,b){
+    return a+b;
+}
+ 
+   let yy= result(add,10,20);
+    console.log(yy);
+
+
+    class cls1{
+        constructor(age,number){
+            this.age=age;
+            this.number=number;
+        }
+        show(){
+            return `  ${this.age} ${this.number}`;
+        }
+    }
+    class cls2 extends cls1{
+        constructor(age,number,brand){
+            super(age,number);
+            this.brand=brand;
+        }
+        display(){
+            return `${this.show()} ${this.brand}`;
+        }
+    }
+    let bb = new cls2(22,"prabha","kk");
+    console.log(bb.display());
+   let aa = new cls1(25,"kanthama");
+    console.log(aa.show());
+
+    class  cls3{
+        constructor(brand){
+            this.brand=brand;
+        }
+        get cbrand(){
+            return this.brand;
+        }
+        set cbrand(x){this.brand=x;}
+    }
+    let cc = new cls3("ford");
+    console.log(cc.cbrand);
+
+    class cls4{
+        constructor(brand){
+        this.brand=brand;
+    }
+    static visable(x){return `${x.brand}`;}
+}
+let dd = new cls4("style");
+console.log(cls4.visable(dd));
+
+function hello(){
+   console.log( x=10+20);
+    console.log("hello");
+};
+let hell = setTimeout(hello,3000);
+// let i=0;
+// function inc() {
+//     i+=1;
+//     console.log(i);
+// }
+// let x= setInterval(inc,1000);
+
+// setInterval(()=> {
+//     clearInterval(x);
+// },1000);
+
+let i = 0;
+
+function increment() {
+  i++;
+  console.log(i);
+}
+
+const incrementTimer = setInterval(increment, 1000);
+
+setInterval(() => {
+    clearTimeout(incrementTimer);
+}, 3000);
+
+function win(){
+    let wind = window.open("" + "left=100px top=200px width=200px heigth=200px");
+    
+}
+let uu =document.cookie;
+document.write(uu);
+    </script> 
+    
+</body>
+</html>

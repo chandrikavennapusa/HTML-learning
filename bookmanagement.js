@@ -1,5 +1,7 @@
 function addbook1(){                                                                        
-    document.querySelector("#nobook").style.display="none";                                                                                                  // addbook click button
+    document.querySelector("#nobook").style.display="none";   
+    document.getElementById("formheading").style.display = "block";       
+    document.getElementById("editEle").style.display = "none";                                                                                       
     disable();
 }
 function disable(){
@@ -120,15 +122,17 @@ function formsaving(){
         document.getElementById("price").value="";
          
     }
-         let status = document.getElementById("Radio").value;
+   let status = document.getElementById("Radio").value;
 
 
        if(editdata1 == true){
+      
         let id1=localStorage.getItem("id");
         let index1;
         let data=JSON.parse(localStorage.getItem("book store"));
         let edit=data.find((x,index)=>{   return x.book_id==id1 ?(index1=index,true):false;  })
           if(edit){
+            
             data[index1].book_name =name;
             data[index1].book_author =author;
             data[index1].book_category =category;
@@ -152,17 +156,7 @@ function formsaving(){
  {
      console.log();
  }
-            
-            
-
-      
-         else{
-            
- if(id.length == 0|| name.length == 0 || author.length ==0|| category.length== 0 ||subcat.length== 0 || price1.length==0|| status.length==0)
- {
-     console.log();
- }
-                 else{
+   else{
                                    var addbook =
                                                      {
                                                         book_id:id,
@@ -181,7 +175,7 @@ function formsaving(){
                                                    tablestoredata(book_list_data);
                                                    document.querySelector(".formdetails").style.visibility="visible";
                                                        clearfield();
-                     }
+                     
                     
                 
              }
@@ -236,7 +230,11 @@ function clearfield(){
 
 var editdata1=false;
 
-function editdata(id){                                                                      
+function editdata(id){   
+   
+    document.getElementById("bookid").disabled = true;
+    document.getElementById("formheading").style.display = "none";  
+    document.getElementById("editEle").style.display = "block";                                                                 
     editdata1=true;
     var table = document.getElementById("book1"),rindex;
      for( var i=0 ; i< table.rows.length; i++){
@@ -247,17 +245,37 @@ function editdata(id){
     document.getElementById("author").value = this.cells[2].innerHTML;
     document.getElementById("category").value = this.cells[3].innerHTML; 
 
-    if(this.cells[4].innerHTML === "History"){
+        
+    if(this.cells[4].innerHTML === "History" ){
         document.getElementById("CheckBox").checked=true;
     }
-    else if(this.cells[4].innerHTML === "Politics" ){
+    else if(this.cells[4].innerHTML === "Politics"){
+        document.getElementById("CheckBox1").checked=true;
+    }
+    else if(this.cells[4].innerHTML === "Memories"){
+        document.getElementById("CheckBox2").checked=true;
+    }
+
+
+    else if( this.cells[4].innerHTML === "HistoryPolitics" ||this.cells[4].innerHTML === "PoliticsHistory"){
+        document.getElementById("CheckBox").checked=true;
         document.getElementById("CheckBox1").checked=true;
         
     }
-    else{
+    else if( this.cells[4].innerHTML === "PoliticsMemories" || this.cells[4].innerHTML === "MemoriesPolitics"){
+        document.getElementById("CheckBox1").checked=true;
         document.getElementById("CheckBox2").checked=true;
     }
-    
+    else if(this.cells[4].innerHTML === "HistoryMemories" || this.cells[4].innerHTML === "MemoriesHistory"){
+        document.getElementById("CheckBox").checked=true;
+        document.getElementById("CheckBox2").checked=true;
+    }
+    else if(this.cells[4].innerHTML === "HistoryPoliticsMemories" || this.cells[4].innerHTML === "PoliticsMemoriesHistory"||this.cells[4].innerHTML === "MemoriesHistoryPolitics" ){
+            document.getElementById("CheckBox").checked=true;
+            document.getElementById("CheckBox1").checked=true;
+            document.getElementById("CheckBox2").checked=true;
+        }
+
     document.getElementById("price").value = this.cells[5].innerHTML;
     if(this.cells[6].innerHTML === "Barrow" ){
         document.getElementById("Radio").checked=true;

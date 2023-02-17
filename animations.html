@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #parag{
+            background-color:aqua;
+            width: 200px;
+            height: 100px;
+            }
+        #ani{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        @keyframes example{
+         from{background-color: aquamarine; } 
+         to{background-color: rgb(140, 20, 238); margin: 10pxs; color:yellow;}
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <p id="parag" onclick="fun()">animation</p>
+    <script>
+        function fun(){
+            addEventListener("click",a);
+        addEventListener("click",b);
+        addEventListener("click",c);
+        }
+        
+        function a(){
+         let x=   document.getElementById("parag").innerHTML = "it is started ";
+                x.style.backgroundColor = "pink";
+        }
+        function b(){
+            let y = document.getElementById("parag").innerHTML =" it is iterrated";
+            y.style.backgroundColor = "yellow";
+        }
+        function c(){
+            let z = document.getElementById("parag").innerHTML = "it is stopped";
+            z.style.backgroundColor = "grey";
+        }
+    </script>
+
+    <div id="ani">animation:</div>
+</body>
+</html>
